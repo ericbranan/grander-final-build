@@ -59,6 +59,9 @@ class Grander_REST_Options {
 
         // Footer logos (IDs only for REST)
         'gc_footer_logo_white',
+        'gc_footer_company_statement',
+        'gc_footer_address',
+        'gc_footer_email',
         'gc_footer_hba_logo',
         'gc_footer_hba_url',
         'gc_footer_bbb_logo',
@@ -71,6 +74,9 @@ class Grander_REST_Options {
         // Trust bar
         'gc_trust_items',
 
+        // Testimonials repeater
+        'gc_testimonials',
+
         // Events
         'gc_events_enabled',
         'gc_events',
@@ -78,6 +84,9 @@ class Grander_REST_Options {
         // Featured projects
         'gc_featured_projects_enabled',
         'gc_featured_projects',
+
+        // FAQ library
+        'gc_faq_items',
 
         // Estimate form
         'gc_estimate_form_shortcode',
@@ -284,6 +293,9 @@ class Grander_REST_Options {
             'gc_header_estimate_mode'      => 'field_gc_header_estimate_mode',
             'gc_header_estimate_url'       => 'field_gc_header_estimate_url',
             'gc_footer_logo_white'         => 'field_gc_footer_logo_white',
+            'gc_footer_company_statement'  => 'field_gc_footer_company_statement',
+            'gc_footer_address'            => 'field_gc_footer_address',
+            'gc_footer_email'              => 'field_gc_footer_email',
             'gc_footer_hba_logo'           => 'field_gc_footer_hba_logo',
             'gc_footer_hba_url'            => 'field_gc_footer_hba_url',
             'gc_footer_bbb_logo'           => 'field_gc_footer_bbb_logo',
@@ -291,10 +303,12 @@ class Grander_REST_Options {
             'gc_social_instagram_url'      => 'field_gc_social_instagram_url',
             'gc_social_facebook_url'       => 'field_gc_social_facebook_url',
             'gc_trust_items'               => 'field_gc_trust_items',
+            'gc_testimonials'              => 'field_gc_testimonials',
             'gc_events_enabled'            => 'field_gc_events_enabled',
             'gc_events'                    => 'field_gc_events',
             'gc_featured_projects_enabled' => 'field_gc_featured_projects_enabled',
             'gc_featured_projects'         => 'field_gc_featured_projects',
+            'gc_faq_items'                 => 'field_gc_faq_items',
             'gc_estimate_form_shortcode'   => 'field_gc_estimate_form_shortcode',
         );
 
