@@ -56,6 +56,9 @@ class Grander_REST_Options {
         'gc_header_estimate_label',
         'gc_header_estimate_mode',
         'gc_header_estimate_url',
+        'gc_email_address',
+        'gc_office_address',
+        'gc_office_hours',
 
         // Footer logos (IDs only for REST)
         'gc_footer_logo_white',
@@ -90,6 +93,18 @@ class Grander_REST_Options {
 
         // Estimate form
         'gc_estimate_form_shortcode',
+
+        // Search page
+        'gc_search_headline',
+        'gc_search_no_results_headline',
+        'gc_search_no_results_message',
+
+        // 404 page
+        'gc_404_headline',
+        'gc_404_subline',
+        'gc_404_cta_label',
+        'gc_404_show_search',
+        'gc_404_suggested_links',
     );
 
     /**
@@ -292,6 +307,9 @@ class Grander_REST_Options {
             'gc_header_estimate_label'     => 'field_gc_header_estimate_label',
             'gc_header_estimate_mode'      => 'field_gc_header_estimate_mode',
             'gc_header_estimate_url'       => 'field_gc_header_estimate_url',
+            'gc_email_address'             => 'field_gc_email_address',
+            'gc_office_address'            => 'field_gc_office_address',
+            'gc_office_hours'              => 'field_gc_office_hours',
             'gc_footer_logo_white'         => 'field_gc_footer_logo_white',
             'gc_footer_company_statement'  => 'field_gc_footer_company_statement',
             'gc_footer_address'            => 'field_gc_footer_address',
@@ -310,6 +328,14 @@ class Grander_REST_Options {
             'gc_featured_projects'         => 'field_gc_featured_projects',
             'gc_faq_items'                 => 'field_gc_faq_items',
             'gc_estimate_form_shortcode'   => 'field_gc_estimate_form_shortcode',
+            'gc_search_headline'           => 'field_gc_search_headline',
+            'gc_search_no_results_headline'=> 'field_gc_search_no_results_headline',
+            'gc_search_no_results_message' => 'field_gc_search_no_results_message',
+            'gc_404_headline'              => 'field_gc_404_headline',
+            'gc_404_subline'               => 'field_gc_404_subline',
+            'gc_404_cta_label'             => 'field_gc_404_cta_label',
+            'gc_404_show_search'           => 'field_gc_404_show_search',
+            'gc_404_suggested_links'       => 'field_gc_404_suggested_links',
         );
 
         return isset( $field_map[ $field_name ] ) ? $field_map[ $field_name ] : false;

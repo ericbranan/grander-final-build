@@ -96,6 +96,9 @@ class Grander_ACF {
         $this->register_contact_fields();
         $this->register_estimate_fields();
 
+        // Utility pages
+        $this->register_search_404_fields();
+
         // CPT fields
         $this->register_project_fields();
         $this->register_faq_fields();
@@ -275,6 +278,29 @@ class Grander_ACF {
                             ),
                         ),
                     ),
+                ),
+                array(
+                    'key' => 'field_gc_email_address',
+                    'label' => 'Email Address',
+                    'name' => 'gc_email_address',
+                    'type' => 'email',
+                    'instructions' => 'Primary company email. Used on Contact page and other contact displays.',
+                ),
+                array(
+                    'key' => 'field_gc_office_address',
+                    'label' => 'Office Address',
+                    'name' => 'gc_office_address',
+                    'type' => 'textarea',
+                    'rows' => 2,
+                    'instructions' => 'Full office address. Used on Contact page.',
+                ),
+                array(
+                    'key' => 'field_gc_office_hours',
+                    'label' => 'Office Hours',
+                    'name' => 'gc_office_hours',
+                    'type' => 'text',
+                    'default_value' => 'Monday – Friday, 8am – 5pm',
+                    'instructions' => 'Business hours display. Used on Contact page.',
                 ),
 
                 // =============================================================
@@ -1313,13 +1339,85 @@ class Grander_ACF {
             'key' => 'group_gc_performance_fields',
             'title' => 'Performance Building Content',
             'fields' => array(
+                // =============================================================
+                // HERO SECTION TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_hero_tab',
+                    'label' => 'Hero Section',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_hero_headline',
+                    'label' => 'Hero Headline',
+                    'name' => 'gc_performance_hero_headline',
+                    'type' => 'text',
+                    'default_value' => 'Building science, built in',
+                    'instructions' => 'Main hero headline. H1 element.',
+                ),
+                array(
+                    'key' => 'field_gc_performance_hero_subline',
+                    'label' => 'Hero Subline',
+                    'name' => 'gc_performance_hero_subline',
+                    'type' => 'textarea',
+                    'rows' => 3,
+                    'default_value' => 'Every Grander home is designed and constructed using proven building science principles. The result is a home that performs better, lasts longer, and costs less to operate.',
+                    'instructions' => 'Supporting text below headline.',
+                ),
+                array(
+                    'key' => 'field_gc_performance_hero_image',
+                    'label' => 'Hero Background Image',
+                    'name' => 'gc_performance_hero_image',
+                    'type' => 'image',
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'instructions' => 'Wide landscape image for hero background.',
+                ),
+
+                // =============================================================
+                // INTRODUCTION TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_intro_tab',
+                    'label' => 'Introduction',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_intro_headline',
+                    'label' => 'Intro Headline',
+                    'name' => 'gc_performance_intro_headline',
+                    'type' => 'text',
+                    'default_value' => 'Why build smart?',
+                    'instructions' => 'H2 headline for introduction section.',
+                ),
                 array(
                     'key' => 'field_gc_performance_intro',
                     'label' => 'Performance Intro',
                     'name' => 'gc_performance_intro',
-                    'type' => 'textarea',
+                    'type' => 'wysiwyg',
+                    'tabs' => 'all',
+                    'toolbar' => 'full',
+                    'media_upload' => 0,
                     'rows' => 4,
+                    'default_value' => '<p>Most homes in the Upstate are built to meet minimum code requirements. At Grander Construction, we go beyond code to deliver homes that perform better in every measurable way.</p><p>Our approach combines Midwestern building standards with modern building science, creating structures that manage moisture, maintain comfortable temperatures, and reduce energy costs for decades to come.</p>',
                     'instructions' => 'Why build smart introduction text.',
+                ),
+
+                // =============================================================
+                // BENEFITS TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_benefits_tab',
+                    'label' => 'Benefits',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_benefits_headline',
+                    'label' => 'Benefits Section Headline',
+                    'name' => 'gc_performance_benefits_headline',
+                    'type' => 'text',
+                    'default_value' => 'The benefits of performance building',
+                    'instructions' => 'H2 headline above the benefits grid.',
                 ),
                 array(
                     'key' => 'field_gc_performance_benefits',
@@ -1356,12 +1454,29 @@ class Grander_ACF {
                         ),
                     ),
                 ),
+
+                // =============================================================
+                // BUILD SCIENCE PRACTICES TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_practices_tab',
+                    'label' => 'Build Science Practices',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_practices_headline',
+                    'label' => 'Practices Section Headline',
+                    'name' => 'gc_performance_practices_headline',
+                    'type' => 'text',
+                    'default_value' => 'Our building science practices',
+                    'instructions' => 'H2 headline above the practices list.',
+                ),
                 array(
                     'key' => 'field_gc_performance_practices',
                     'label' => 'Build Science Practices',
                     'name' => 'gc_performance_practices',
                     'type' => 'repeater',
-                    'layout' => 'table',
+                    'layout' => 'block',
                     'button_label' => 'Add Practice',
                     'sub_fields' => array(
                         array(
@@ -1381,6 +1496,95 @@ class Grander_ACF {
                         ),
                     ),
                 ),
+
+                // =============================================================
+                // FAQ SECTION TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_faq_tab',
+                    'label' => 'FAQ Section',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_faq_enabled',
+                    'label' => 'Enable FAQ Section',
+                    'name' => 'gc_performance_faq_enabled',
+                    'type' => 'true_false',
+                    'default_value' => 1,
+                    'ui' => 1,
+                    'instructions' => 'Show the FAQ section on the performance building page.',
+                ),
+                array(
+                    'key' => 'field_gc_performance_faq_headline',
+                    'label' => 'FAQ Section Headline',
+                    'name' => 'gc_performance_faq_headline',
+                    'type' => 'text',
+                    'default_value' => 'Common questions about performance building',
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field' => 'field_gc_performance_faq_enabled',
+                                'operator' => '==',
+                                'value' => '1',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'key' => 'field_gc_performance_faq_group',
+                    'label' => 'FAQ Group',
+                    'name' => 'gc_performance_faq_group',
+                    'type' => 'select',
+                    'choices' => array(
+                        'performance-building' => 'Performance Building',
+                        'build-process' => 'Build Process',
+                    ),
+                    'default_value' => 'performance-building',
+                    'instructions' => 'Which FAQ context to display.',
+                    'conditional_logic' => array(
+                        array(
+                            array(
+                                'field' => 'field_gc_performance_faq_enabled',
+                                'operator' => '==',
+                                'value' => '1',
+                            ),
+                        ),
+                    ),
+                ),
+
+                // =============================================================
+                // CTA SECTION TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_performance_cta_tab',
+                    'label' => 'CTA Section',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_performance_cta_headline',
+                    'label' => 'CTA Headline',
+                    'name' => 'gc_performance_cta_headline',
+                    'type' => 'text',
+                    'default_value' => 'Ready to build a home that performs?',
+                    'instructions' => 'Final call to action headline.',
+                ),
+                array(
+                    'key' => 'field_gc_performance_cta_body',
+                    'label' => 'CTA Body',
+                    'name' => 'gc_performance_cta_body',
+                    'type' => 'textarea',
+                    'rows' => 2,
+                    'default_value' => 'Let us show you how building science can make your custom home more comfortable, more durable, and more efficient. Request an estimate to start the conversation.',
+                    'instructions' => 'Supporting text for CTA.',
+                ),
+                array(
+                    'key' => 'field_gc_performance_cta_button_label',
+                    'label' => 'CTA Button Label',
+                    'name' => 'gc_performance_cta_button_label',
+                    'type' => 'text',
+                    'default_value' => 'Request an estimate',
+                    'instructions' => 'Button text. Links to estimate lightbox.',
+                ),
             ),
             'location' => array(
                 array(
@@ -1390,7 +1594,20 @@ class Grander_ACF {
                         'value' => 'performance-building',
                     ),
                 ),
+                array(
+                    array(
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'default',
+                    ),
+                    array(
+                        'param' => 'post_title',
+                        'operator' => '==',
+                        'value' => 'Performance Building',
+                    ),
+                ),
             ),
+            'menu_order' => 17,
             'show_in_rest' => true,
         ) );
     }
@@ -2210,7 +2427,7 @@ class Grander_ACF {
                     'label' => 'Hero Headline',
                     'name' => 'gc_contact_hero_headline',
                     'type' => 'text',
-                    'default_value' => 'Get in touch',
+                    'default_value' => 'Let\'s start a conversation',
                     'instructions' => 'Main hero headline. H1 element.',
                 ),
                 array(
@@ -2219,7 +2436,7 @@ class Grander_ACF {
                     'name' => 'gc_contact_hero_subline',
                     'type' => 'textarea',
                     'rows' => 3,
-                    'default_value' => 'Whether you have a question, want to discuss a project, or are ready to get started, we are here to help. Reach out and a member of our team will respond promptly.',
+                    'default_value' => 'Whether you\'re ready to begin or just exploring ideas, our team is here to help. Reach out and let\'s discuss how we can bring your vision to life.',
                     'instructions' => 'Supporting text below headline.',
                 ),
                 array(
@@ -2741,6 +2958,133 @@ We believe the estimate process should feel collaborative, not transactional. Yo
                 ),
             ),
             'menu_order' => 40,
+            'show_in_rest' => true,
+        ) );
+    }
+
+    /**
+     * Search and 404 Page Fields
+     *
+     * Location: Theme Options (global)
+     * Contains: Search page headline/message, 404 page headline/message
+     */
+    private function register_search_404_fields() {
+        acf_add_local_field_group( array(
+            'key' => 'group_gc_utility_pages',
+            'title' => 'Search & 404 Page Settings',
+            'fields' => array(
+                // =============================================================
+                // SEARCH PAGE TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_search_tab',
+                    'label' => 'Search Page',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_search_headline',
+                    'label' => 'Search Results Headline',
+                    'name' => 'gc_search_headline',
+                    'type' => 'text',
+                    'default_value' => 'Search results',
+                    'instructions' => 'H1 headline for search results page.',
+                ),
+                array(
+                    'key' => 'field_gc_search_no_results_headline',
+                    'label' => 'No Results Headline',
+                    'name' => 'gc_search_no_results_headline',
+                    'type' => 'text',
+                    'default_value' => 'No results found',
+                    'instructions' => 'H2 headline when no search results.',
+                ),
+                array(
+                    'key' => 'field_gc_search_no_results_message',
+                    'label' => 'No Results Message',
+                    'name' => 'gc_search_no_results_message',
+                    'type' => 'textarea',
+                    'rows' => 3,
+                    'default_value' => 'We couldn\'t find anything matching your search. Try different keywords or browse our services and projects.',
+                    'instructions' => 'Message displayed when no results found.',
+                ),
+
+                // =============================================================
+                // 404 PAGE TAB
+                // =============================================================
+                array(
+                    'key' => 'field_gc_404_tab',
+                    'label' => '404 Page',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_gc_404_headline',
+                    'label' => '404 Headline',
+                    'name' => 'gc_404_headline',
+                    'type' => 'text',
+                    'default_value' => 'Page not found',
+                    'instructions' => 'H1 headline for 404 page.',
+                ),
+                array(
+                    'key' => 'field_gc_404_subline',
+                    'label' => '404 Subline',
+                    'name' => 'gc_404_subline',
+                    'type' => 'textarea',
+                    'rows' => 2,
+                    'default_value' => 'The page you\'re looking for doesn\'t exist or has been moved. Let us help you find what you need.',
+                    'instructions' => 'Supporting text below headline.',
+                ),
+                array(
+                    'key' => 'field_gc_404_cta_label',
+                    'label' => 'CTA Button Label',
+                    'name' => 'gc_404_cta_label',
+                    'type' => 'text',
+                    'default_value' => 'Return to home',
+                    'instructions' => 'Button text linking to homepage.',
+                ),
+                array(
+                    'key' => 'field_gc_404_show_search',
+                    'label' => 'Show Search Box',
+                    'name' => 'gc_404_show_search',
+                    'type' => 'true_false',
+                    'default_value' => 1,
+                    'ui' => 1,
+                    'instructions' => 'Display a search box on the 404 page.',
+                ),
+                array(
+                    'key' => 'field_gc_404_suggested_links',
+                    'label' => 'Suggested Links',
+                    'name' => 'gc_404_suggested_links',
+                    'type' => 'repeater',
+                    'layout' => 'table',
+                    'button_label' => 'Add Link',
+                    'max' => 6,
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_gc_404_suggested_links__label',
+                            'label' => 'Label',
+                            'name' => 'label',
+                            'type' => 'text',
+                            'wrapper' => array( 'width' => '50' ),
+                        ),
+                        array(
+                            'key' => 'field_gc_404_suggested_links__url',
+                            'label' => 'URL',
+                            'name' => 'url',
+                            'type' => 'url',
+                            'wrapper' => array( 'width' => '50' ),
+                        ),
+                    ),
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'grander-settings',
+                    ),
+                ),
+            ),
+            'menu_order' => 99,
             'show_in_rest' => true,
         ) );
     }
