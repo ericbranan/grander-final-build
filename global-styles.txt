@@ -1,0 +1,315 @@
+/* ===========================
+   Grander Construction Design Tokens
+   =========================== */
+
+:root {
+  /* Brand colors */
+  --gc-color-primary: #1A1A1A;        /* Grander Black */
+  --gc-color-secondary: #FFFFFF;      /* Soft white */
+  --gc-color-accent: #B08D66;         /* Grander Gold (normal links, accents) */
+  --gc-color-accent-deep: #B08D66;    /* Deep gold / hover */
+  --gc-color-warm-cream: #F5EEE1;     /* Section background */
+  --gc-color-light-warm-gray: #EDE6D4;/* Neutral background / cards */
+  --gc-color-deep-brown: #4C2A19;     /* Secondary accent */
+  --gc-color-overlay-black: rgba(0, 0, 0, 0.45);
+
+  /* Typography */
+  --gc-font-heading: "Baskerville", "Times New Roman", serif;
+  --gc-font-body: "Corbel", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --gc-body-size-desktop: 18px;
+  --gc-body-size-tablet: 17px;
+  --gc-body-size-mobile: 16px;
+
+  --gc-line-height-body: 1.75;
+  --gc-line-height-heading-1: 1.15;
+  --gc-line-height-heading-2: 1.2;
+  --gc-line-height-heading-3: 1.25;
+  --gc-line-height-heading-4: 1.25;
+
+  /* Layout defaults */
+  --gc-content-width: 1280px;
+  --gc-section-padding-desktop: 120px;
+  --gc-section-padding-tablet: 80px;
+  --gc-section-padding-mobile: 60px;
+  --gc-gap-column: 20px;
+  --gc-gap-row: 20px;
+}
+
+/* ===========================
+   Base typography
+   =========================== */
+
+body {
+  font-family: var(--gc-font-body);
+  font-weight: 400;
+  font-size: var(--gc-body-size-desktop);
+  line-height: var(--gc-line-height-body);
+  color: var(--gc-color-primary);
+}
+
+/* Paragraphs and lists */
+p,
+li {
+  margin-bottom: 1.25em;
+}
+
+/* Links */
+a {
+  font-family: var(--gc-font-body);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gc-color-accent);        /* was #C9A869, now #B08D66 */
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--gc-color-accent-deep);   /* deep gold */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--gc-font-heading);
+  color: var(--gc-color-primary);
+  letter-spacing: 0;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: var(--gc-line-height-heading-1);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: var(--gc-line-height-heading-2);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: var(--gc-line-height-heading-3);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: var(--gc-line-height-heading-4);
+}
+
+h5 {
+  font-family: var(--gc-font-body);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--gc-color-primary);
+}
+
+h6 {
+  font-family: var(--gc-font-body);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--gc-color-primary);
+}
+
+/* Small text / meta */
+.gc-text-meta,
+small {
+  font-family: var(--gc-font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gc-color-deep-brown);
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+button,
+input[type="button"],
+input[type="submit"],
+.gc-btn,
+.elementor-button {
+  font-family: var(--gc-font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--gc-color-accent);
+  color: var(--gc-color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+              box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.gc-btn:hover,
+.elementor-button:hover {
+  background-color: var(--gc-color-accent-deep);
+  color: #FFFFFF;
+}
+
+/* Secondary / outline style helper */
+.gc-btn-outline {
+  background-color: transparent;
+  color: var(--gc-color-accent);
+  border: 1px solid var(--gc-color-accent);
+}
+
+.gc-btn-outline:hover {
+  background-color: var(--gc-color-accent);
+  color: var(--gc-color-primary);
+}
+
+/* ===========================
+   Forms
+   =========================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+  font-family: var(--gc-font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gc-color-primary);
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC;
+  padding: 10px 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--gc-color-accent);
+  box-shadow: 0 0 0 1px var(--gc-color-accent);
+}
+
+/* ===========================
+   Layout defaults
+   =========================== */
+
+.gc-container,
+.elementor-section.gc-container {
+  max-width: var(--gc-content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-section {
+  padding-top: var(--gc-section-padding-desktop);
+  padding-bottom: var(--gc-section-padding-desktop);
+}
+
+.gc-section-alt {
+  padding-top: var(--gc-section-padding-desktop);
+  padding-bottom: var(--gc-section-padding-desktop);
+  background-color: var(--gc-color-warm-cream);
+}
+
+/* Dark section helper */
+.gc-section-dark {
+  padding-top: var(--gc-section-padding-desktop);
+  padding-bottom: var(--gc-section-padding-desktop);
+  background-color: var(--gc-color-primary);
+  color: #FFFFFF;
+}
+
+.gc-section-dark h1,
+.gc-section-dark h2,
+.gc-section-dark h3,
+.gc-section-dark h4,
+.gc-section-dark h5,
+.gc-section-dark h6 {
+  color: #FFFFFF;
+}
+
+.gc-section-dark a {
+  color: var(--gc-color-accent);         /* deep gold link */
+}
+
+.gc-section-dark a:hover {
+  color: var(--gc-color-accent-deep);
+}
+
+/* Gaps (can be applied to flex or grid wrappers) */
+.gc-grid {
+  display: grid;
+  grid-column-gap: var(--gc-gap-column);
+  grid-row-gap: var(--gc-gap-row);
+}
+
+/* Overlay utility for hero and modals */
+.gc-overlay {
+  position: relative;
+}
+
+.gc-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gc-color-overlay-black);
+  pointer-events: none;
+}
+
+/* ===========================
+   Responsive adjustments
+   =========================== */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: var(--gc-body-size-tablet);
+  }
+
+  .gc-section,
+  .gc-section-alt,
+  .gc-section-dark {
+    padding-top: var(--gc-section-padding-tablet);
+    padding-bottom: var(--gc-section-padding-tablet);
+  }
+
+  /* Tablet heading scale ~90 percent if needed */
+  h1 { font-size: clamp(43px, 5.4vw, 65px); }
+  h2 { font-size: clamp(29px, 3.6vw, 43px); }
+  h3 { font-size: clamp(22px, 2.7vw, 30px); }
+  h4 { font-size: clamp(18px, 2.3vw, 23px); }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: var(--gc-body-size-mobile);
+  }
+
+  .gc-section,
+  .gc-section-alt,
+  .gc-section-dark {
+    padding-top: var(--gc-section-padding-mobile);
+    padding-bottom: var(--gc-section-padding-mobile);
+  }
+
+  /* Mobile heading scale ~80 percent */
+  h1 { font-size: clamp(38px, 8vw, 58px); }
+  h2 { font-size: clamp(26px, 6vw, 38px); }
+  h3 { font-size: clamp(20px, 4.5vw, 28px); }
+  h4 { font-size: clamp(17px, 3.6vw, 22px); }
+}

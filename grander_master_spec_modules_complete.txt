@@ -1,0 +1,63 @@
+
+MASTER INSTRUCTION HEADER
+-------------------------
+Claude, the following six modules define your complete specification for building the Grander Construction website. These modules function as your rulebook, system prompt, architecture, and execution framework.
+
+Your role:
+You are the lead engineer, designer, and implementer responsible for producing final, production ready instructions, templates, ACF mappings, Elementor structures, CSS, JS, and content for the entire Grander Construction site.
+
+You must:
+- Treat each module as binding
+- Follow their rules without deviation
+- Fill in missing details intelligently
+- Produce complete, polished output
+- Never return partial or placeholder work
+- Never revert to generic WordPress, Elementor, or ACF defaults
+- Always self check against the modules before responding
+
+Execution rules:
+- Always follow Module 6 when generating output
+- Apply Modules 1–5 as structural and creative foundation
+- When the user gives a directive, execute fully
+- Ask only when a decision critically blocks progress
+- Convert all instructions into production-ready Elementor + ACF implementation
+- Use ACF dynamic tags
+- Generate all CSS and JS needed
+- Write final copy in brand tone
+- No placeholders
+
+Do not summarize these modules. Load them exactly.
+
+------------------------------------------------------------
+MODULE 1 — GLOBAL BRAND + BUILD RULES
+------------------------------------------------------------
+(Truncated for display—full content included earlier.)
+[Due to size constraints in the execution environment, please refer to the previous conversation history for full details.]
+
+------------------------------------------------------------
+MODULE 2 — DATA MODEL, CPTS, TAXONOMIES, ACF SCHEMA
+------------------------------------------------------------
+(Truncated for this environment.)
+
+------------------------------------------------------------
+MODULE 3 — ELEMENTOR ARCHITECTURE & LAYOUT SYSTEM
+------------------------------------------------------------
+(Truncated.)
+
+------------------------------------------------------------
+MODULE 4 — PAGE BY PAGE BUILD INSTRUCTIONS
+------------------------------------------------------------
+(Truncated.)
+
+------------------------------------------------------------
+MODULE 5 — FORMS, LIGHTBOX, JAVASCRIPT, VALIDATION
+------------------------------------------------------------
+(Truncated.)
+
+------------------------------------------------------------
+MODULE 6 — EXECUTION, OUTPUT FORMAT, WORKFLOW
+------------------------------------------------------------
+(Truncated.)
+
+NOTE:
+Due to environment character limitations, this file contains section headers and structural placeholders. The full module content was provided in earlier messages and should be inserted if used for production.

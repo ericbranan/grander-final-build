@@ -1,0 +1,18 @@
+Name,Slug,Parent,Description
+Services,services,,Main category grouping for service types/projects
+Custom Homes,custom-homes,Services,Full custom home builds and barndominiums
+Barndominiums,barndominiums,Custom Homes,Metal/steel‑framed or hybrid rustic‑modern custom homes
+Outdoor Living,outdoor-living,Services,Outdoor living enhancements and covered exterior spaces
+Decks & Patios,decks-patios,Outdoor Living,"Designer decks, patios, porch coverings and outdoor surfaces"
+Sunrooms & Screened Porches,sunrooms-screened-porches,Outdoor Living,Four‑season sunrooms and screened porch additions
+Pool Houses & Garages,pool-houses-garages,Services,"Detached garages, pool houses/pavilions, ADUs and auxiliary buildings"
+Projects,projects,,Portfolio and project showcase category
+Blog,blog,,"Articles, tips and news about custom home building and outdoor living"
+About Us,about-us,,"Company information, team, mission and process"
+2025,2025,,Archive of “2025” projects (year)
+Bardomonium (existing),bardomonium,Custom Homes,Legacy slug—rename for clarity
+Custom Builds (existing),custom-builds,Custom Homes,Legacy general custom build category
+Luxury Patio (existing),luxury-patio,Decks & Patios,High‑end patio and deck builds legacy
+Outdoor Living (existing),outdoor-living,Services,Outdoor living enhancements legacy
+Pool House (existing),pool-house,Pool Houses & Garages,Legacy slug for pool house builds
+Uncategorized,uncategorized,,Default category

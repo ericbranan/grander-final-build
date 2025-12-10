@@ -1,0 +1,567 @@
+/**
+ * Grander Core CSS
+ *
+ * ARCHITECTURE: Minimal utility styles and shortcode output styling ONLY.
+ * Layout and design should be handled in Elementor.
+ *
+ * This file provides:
+ * - CSS Custom Properties for brand consistency
+ * - Shortcode output styling (zigzag divider, trust bar, events strip, etc.)
+ * - Mobile floating call icon
+ * - FAQ accordion toggle behavior hooks
+ * - Estimate lightbox behavior (not layout)
+ *
+ * Class naming convention: .gc-[component-name]
+ *
+ * @package Grander_Core
+ * @since 1.0.0
+ */
+
+/* ==========================================================================
+   CSS Custom Properties
+   These provide brand consistency and can be used in Elementor custom CSS
+   ========================================================================== */
+
+:root {
+    /* Brand Colors (aligned with Elementor Global Colors) */
+    --gc-gold: #B08D66;
+    --gc-deep-brown: #4C2A19;
+    --gc-medium-brown: #5C4A3D;
+    --gc-warm-white: #FDFBF8;
+    --gc-dark: #1A1A1A;
+    --gc-light: #FAFAF8;
+    --gc-text: #333333;
+    --gc-text-muted: #666666;
+    --gc-border: #E5E5E5;
+
+    /* Spacing Tokens (Module 1: 16/24/32/48px) */
+    --gc-spacing-xs: 0.5rem;   /* 8px */
+    --gc-spacing-sm: 1rem;     /* 16px */
+    --gc-spacing-md: 1.5rem;   /* 24px */
+    --gc-spacing-lg: 2rem;     /* 32px */
+    --gc-spacing-xl: 3rem;     /* 48px */
+    --gc-transition: 0.2s ease;
+
+    /* Typography (font stacks - actual fonts loaded via Elementor/theme) */
+    --gc-font-heading: 'Libre Baskerville', Baskerville, 'Times New Roman', serif;
+    --gc-font-body: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+/* ==========================================================================
+   Shortcode: [gc_zigzag_divider]
+   SVG zigzag pattern divider
+   ========================================================================== */
+
+.gc-zigzag-divider {
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.gc-zigzag-divider svg {
+    width: 100%;
+    height: 40px;
+    display: block;
+}
+
+.gc-zigzag-divider--dark svg {
+    fill: var(--gc-deep-brown);
+}
+
+.gc-zigzag-divider--light svg {
+    fill: var(--gc-warm-white);
+}
+
+/* ==========================================================================
+   Shortcode: [gc_service_area]
+   Service area microline
+   ========================================================================== */
+
+.gc-service-area-line {
+    font-size: 0.875rem;
+    color: var(--gc-text-muted);
+    margin: 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Shortcode: [gc_trust_bar]
+   Trust bar with logos
+   ========================================================================== */
+
+.gc-trust-bar {
+    padding: var(--gc-spacing-sm) 0;
+}
+
+.gc-trust-bar__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gc-spacing-md) var(--gc-spacing-lg);
+}
+
+.gc-trust-bar__item {
+    display: flex;
+    align-items: center;
+    gap: var(--gc-spacing-xs);
+}
+
+.gc-trust-bar__link {
+    display: flex;
+    align-items: center;
+    gap: var(--gc-spacing-xs);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity var(--gc-transition);
+}
+
+.gc-trust-bar__link:hover {
+    opacity: 0.8;
+}
+
+.gc-trust-bar__logo {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.gc-trust-bar__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Shortcode: [gc_events_strip]
+   Upcoming events strip
+   ========================================================================== */
+
+.gc-events-strip {
+    padding: var(--gc-spacing-md) 0;
+    background: var(--gc-light);
+}
+
+.gc-events-strip__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gc-spacing-md);
+}
+
+.gc-events-strip__event {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gc-spacing-md);
+    padding: var(--gc-spacing-md);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gc-events-strip__content {
+    flex: 1;
+    min-width: 200px;
+}
+
+.gc-events-strip__title {
+    margin: 0 0 var(--gc-spacing-xs);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gc-dark);
+}
+
+.gc-events-strip__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gc-spacing-xs) var(--gc-spacing-sm);
+    font-size: 0.875rem;
+    color: var(--gc-text-muted);
+    margin-bottom: var(--gc-spacing-xs);
+}
+
+.gc-events-strip__summary {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--gc-text);
+}
+
+.gc-events-strip__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    background: var(--gc-gold);
+    color: var(--gc-deep-brown);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: background var(--gc-transition), transform var(--gc-transition);
+}
+
+.gc-events-strip__button:hover {
+    background: #9A7A58;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Shortcode: [gc_announcement_bar]
+   Conditional announcement bar
+   ========================================================================== */
+
+.gc-announcement-bar {
+    padding: var(--gc-spacing-sm) var(--gc-spacing-md);
+    text-align: center;
+    font-size: 0.9375rem;
+}
+
+.gc-announcement-bar--info {
+    background: var(--gc-light);
+    color: var(--gc-text);
+}
+
+.gc-announcement-bar--highlight {
+    background: var(--gc-gold);
+    color: var(--gc-deep-brown);
+}
+
+.gc-announcement-bar--urgent {
+    background: var(--gc-deep-brown);
+    color: var(--gc-warm-white);
+}
+
+.gc-announcement-bar__message {
+    margin: 0;
+    display: inline;
+}
+
+.gc-announcement-bar__button {
+    display: inline-block;
+    margin-left: var(--gc-spacing-sm);
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background var(--gc-transition), color var(--gc-transition);
+}
+
+.gc-announcement-bar__button:hover {
+    background: currentColor;
+}
+
+.gc-announcement-bar--info .gc-announcement-bar__button:hover {
+    background: var(--gc-text);
+    color: var(--gc-warm-white);
+}
+
+.gc-announcement-bar--highlight .gc-announcement-bar__button:hover {
+    background: var(--gc-deep-brown);
+    color: var(--gc-warm-white);
+}
+
+.gc-announcement-bar--urgent .gc-announcement-bar__button:hover {
+    background: var(--gc-warm-white);
+    color: var(--gc-deep-brown);
+}
+
+/* ==========================================================================
+   Mobile Floating Call Icon
+   Created via JS, shown on mobile only
+   ========================================================================== */
+
+.gc-float-call {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--gc-gold);
+    color: var(--gc-deep-brown);
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform var(--gc-transition), box-shadow var(--gc-transition);
+}
+
+.gc-float-call:hover,
+.gc-float-call:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    color: var(--gc-deep-brown);
+}
+
+.gc-float-call svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 767px) {
+    .gc-float-call {
+        display: flex;
+    }
+}
+
+/* ==========================================================================
+   FAQ Accordion Behavior Hooks
+   Toggle states for FAQ items - layout defined in Elementor
+   ========================================================================== */
+
+.gc-faq-item {
+    /* Base state - answer hidden */
+}
+
+.gc-faq-item .gc-faq-answer {
+    display: none;
+    overflow: hidden;
+}
+
+.gc-faq-item.is-open .gc-faq-answer,
+.gc-faq-item.gc-faq-item--open .gc-faq-answer {
+    display: block;
+}
+
+.gc-faq-question {
+    cursor: pointer;
+}
+
+.gc-faq-question:focus {
+    outline: 2px solid var(--gc-gold);
+    outline-offset: 2px;
+}
+
+/* FAQ toggle icon rotation */
+.gc-faq-question .gc-faq-icon {
+    transition: transform var(--gc-transition);
+}
+
+.gc-faq-item.is-open .gc-faq-question .gc-faq-icon,
+.gc-faq-item.gc-faq-item--open .gc-faq-question .gc-faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Contact page FAQ variant */
+.gc-contact-faq__item .gc-contact-faq__answer {
+    display: none;
+    overflow: hidden;
+}
+
+.gc-contact-faq__item.is-open .gc-contact-faq__answer {
+    display: block;
+}
+
+.gc-contact-faq__question {
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Estimate Lightbox Behavior
+   Overlay and modal visibility states - layout defined in Elementor
+   ========================================================================== */
+
+.gc-estimate-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gc-estimate-lightbox-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gc-estimate-lightbox {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    background: var(--gc-warm-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gc-estimate-lightbox-overlay.is-active .gc-estimate-lightbox {
+    transform: translateY(0);
+}
+
+.gc-estimate-lightbox__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background var(--gc-transition);
+}
+
+.gc-estimate-lightbox__close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.gc-estimate-lightbox__close svg {
+    width: 24px;
+    height: 24px;
+    color: var(--gc-text);
+}
+
+/* Body scroll lock when lightbox is open */
+body.gc-lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .gc-estimate-lightbox-overlay {
+        padding: 16px;
+    }
+
+    .gc-estimate-lightbox {
+        max-height: 95vh;
+        border-radius: 8px;
+    }
+}
+
+/* ==========================================================================
+   Project Lightbox Behavior
+   Gallery lightbox states - layout defined in Elementor
+   ========================================================================== */
+
+.gc-project-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gc-project-lightbox--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gc-project-lightbox__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Header Scroll State Hook
+   Applied via JS when page is scrolled
+   ========================================================================== */
+
+.gc-header-stripe--scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Template Class Hook Placeholders
+   These classes are applied in Elementor templates for targeting
+   Actual styles defined in Elementor - these are empty hooks for JS/CSS
+   ========================================================================== */
+
+/* Testimonial slider versions */
+.gc-testimonials-v1 { }
+.gc-testimonials-v2 { }
+
+/* FAQ accordion versions */
+.gc-faq-accordion-v1 { }
+
+/* Featured projects */
+.gc-featured-projects-v1 { }
+
+/* Portfolio blocks */
+.gc-portfolio-block-v1 { }
+
+/* Estimate CTA */
+.gc-estimate-cta-v1 { }
+
+/* Service cards */
+.gc-service-cards-v1 { }
+
+/* Team grid */
+.gc-team-grid-v1 { }
+
+/* Process steps */
+.gc-process-steps-v1 { }
+
+/* Gallery filter */
+.gc-gallery-filter-v1 { }
+
+/* ==========================================================================
+   Utility Classes
+   Small helpers that can be used across templates
+   ========================================================================== */
+
+/* Screen reader only (accessibility) */
+.gc-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Hide on mobile */
+@media (max-width: 767px) {
+    .gc-hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+    .gc-hide-desktop {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .gc-float-call,
+    .gc-announcement-bar,
+    .gc-estimate-lightbox-overlay {
+        display: none !important;
+    }
+}

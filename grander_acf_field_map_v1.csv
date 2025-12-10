@@ -1,0 +1,103 @@
+module,context,field_name,field_type,notes,rest_enabled
+Global options,ACF options page,gc_announcement_enabled,true_false,Toggle sitewide announcement bar,yes
+Global options,ACF options page,gc_announcement_message,textarea,"Short message, sentence case",yes
+Global options,ACF options page,gc_announcement_button_label,text,Optional,yes
+Global options,ACF options page,gc_announcement_button_url,url,Optional,yes
+Global options,ACF options page,gc_announcement_style,select,"info, highlight, urgent",yes
+Global options,ACF options page,gc_service_area_enabled,true_false,Global microline toggle,yes
+Global options,ACF options page,gc_service_area_text,text,Default: Proudly serving the Upstate of South Carolina with custom homes and outdoor living,yes
+Global options,ACF options page,gc_phone_number,text,Used for header Call now and mobile floating icon,yes
+Global options,ACF options page,gc_header_estimate_label,text,Default: Request an estimate,yes
+Global options,ACF options page,gc_header_estimate_mode,select,"lightbox, link",yes
+Global options,ACF options page,gc_header_estimate_url,url,Used if mode is link,yes
+Global options,ACF options page,gc_footer_logo_white,image,SVG or PNG,yes
+Global options,ACF options page,gc_footer_hba_logo,image,Home Builders Association logo,yes
+Global options,ACF options page,gc_footer_hba_url,url,,yes
+Global options,ACF options page,gc_footer_bbb_logo,image,Better Business Bureau logo,yes
+Global options,ACF options page,gc_footer_bbb_url,url,,yes
+Global options,ACF options page,gc_social_instagram_url,url,,yes
+Global options,ACF options page,gc_social_facebook_url,url,,yes
+Trust bar,ACF options page,gc_trust_items,repeater,Max 5 items,yes
+Trust bar,ACF options page,gc_trust_items__logo,image,Subfield,yes
+Trust bar,ACF options page,gc_trust_items__label,text,Subfield,yes
+Trust bar,ACF options page,gc_trust_items__url,url,"Subfield, optional",yes
+Trust bar,ACF options page,gc_trust_items__order,number,"Subfield, optional if you sort by row order",yes
+Testimonials,ACF options page (v1),gc_testimonials,repeater,"Seed 10 to 15, display random 3 to 5",yes
+Testimonials,ACF options page (v1),gc_testimonials__enabled,true_false,Subfield,yes
+Testimonials,ACF options page (v1),gc_testimonials__quote,textarea,Subfield,yes
+Testimonials,ACF options page (v1),gc_testimonials__first_name,text,Subfield,yes
+Testimonials,ACF options page (v1),gc_testimonials__last_initial,text,Subfield,yes
+Testimonials,ACF options page (v1),gc_testimonials__city,text,"Subfield, optional",yes
+Testimonials,ACF options page (v1),gc_testimonials__service_category,taxonomy,"Subfield, optional link to service_category",yes
+Testimonials,ACF options page (v1),gc_testimonials__source,select,"Subfield: Google, Magazine, Referral",yes
+Events,ACF options page (v1),gc_events_enabled,true_false,Toggle events strip,yes
+Events,ACF options page (v1),gc_events,repeater,,yes
+Events,ACF options page (v1),gc_events__title,text,Subfield,yes
+Events,ACF options page (v1),gc_events__short_summary,textarea,Subfield,yes
+Events,ACF options page (v1),gc_events__start_date,date_picker,Subfield,yes
+Events,ACF options page (v1),gc_events__end_date,date_picker,"Subfield, optional",yes
+Events,ACF options page (v1),gc_events__location,text,Subfield,yes
+Events,ACF options page (v1),gc_events__button_label,text,"Subfield, optional",yes
+Events,ACF options page (v1),gc_events__button_url,url,"Subfield, optional",yes
+Featured projects,ACF options page,gc_featured_projects_enabled,true_false,,yes
+Featured projects,ACF options page,gc_featured_projects,relationship,"Relationship to Projects CPT, ordered",yes
+Page hero,Page fields,gc_hero_headline,text,Fallback if template uses dynamic fields,yes
+Page hero,Page fields,gc_hero_subline,textarea,,yes
+Page hero,Page fields,gc_hero_background_image,image,,yes
+Page hero,Page fields,gc_hero_nav_variant,select,"light, dark",yes
+Page hero,Page fields,gc_trust_bar_enabled_on_page,true_false,Optional per page toggle,yes
+Home page,Home page fields,gc_home_expert_offerings_intro,textarea,Expert offerings paragraph,yes
+Home page,Home page fields,gc_home_performance_teaser_headline,text,,yes
+Home page,Home page fields,gc_home_performance_teaser_body,textarea,,yes
+Home page,Home page fields,gc_home_testimonial_slider_variant,select,"v1, v2",yes
+Service page,Service page fields,gc_service_overview,textarea,120 to 180 words,yes
+Service page,Service page fields,gc_service_jump_links_enabled,true_false,,yes
+Service page,Service page fields,gc_service_featured_projects,relationship,Override global picker,yes
+Service page,Service page fields,gc_service_portfolio_sections,repeater,"Timeline ordering, newest first",yes
+Service page,Service page fields,gc_service_portfolio_sections__title,text,Subfield,yes
+Service page,Service page fields,gc_service_portfolio_sections__location,text,"Subfield, optional",yes
+Service page,Service page fields,gc_service_portfolio_sections__summary,textarea,Subfield,yes
+Service page,Service page fields,gc_service_portfolio_sections__has_design_image,true_false,Subfield,yes
+Service page,Service page fields,gc_service_portfolio_sections__design_image,image,"Subfield, conditional",yes
+Service page,Service page fields,gc_service_portfolio_sections__gallery,gallery,Subfield,yes
+Service page,Service page fields,gc_service_mid_cta_headline,text,,yes
+Service page,Service page fields,gc_service_mid_cta_body,textarea,,yes
+Service page,Service page fields,gc_service_faq_groups,taxonomy,If using FAQ CPT + group taxonomy,yes
+Service page,Service page fields,gc_service_estimate_cta_label,text,Default: Request an estimate,yes
+Build process page,Build process page fields,gc_process_intro,textarea,,yes
+Build process page,Build process page fields,gc_process_steps,repeater,If you want editable step labels,yes
+Build process page,Build process page fields,gc_process_steps__label,text,Subfield,yes
+Build process page,Build process page fields,gc_process_steps__short_desc,textarea,Subfield,yes
+Build process page,Build process page fields,gc_process_faq_groups,taxonomy,,yes
+Team page,Team page fields,gc_team_intro,textarea,,yes
+Team page,Team page fields,gc_team_members,repeater,If not using a Team CPT,yes
+Team page,Team page fields,gc_team_members__name,text,Subfield,yes
+Team page,Team page fields,gc_team_members__title,text,Subfield,yes
+Team page,Team page fields,gc_team_members__bio,textarea,Subfield,yes
+Team page,Team page fields,gc_team_members__photo,image,Subfield,yes
+Team page,Team page fields,gc_team_members__highlight_owner,true_false,Subfield,yes
+Team page,Team page fields,gc_team_mission,textarea,,yes
+Team page,Team page fields,gc_team_promise,textarea,,yes
+Gallery page,Gallery page fields,gc_gallery_intro,textarea,,yes
+Gallery page,Gallery page fields,gc_gallery_filter_enabled,true_false,,yes
+Contact page,Contact page fields,gc_contact_intro,textarea,,yes
+Contact page,Contact page fields,gc_contact_map_embed,oembed,Optional if using a map widget,yes
+Contact page,Contact page fields,gc_contact_faq_groups,taxonomy,Or relationship to FAQ items,yes
+Estimate,Estimate page fields,gc_estimate_reassurance_copy,textarea,Used in page and lightbox,yes
+Estimate,Estimate page fields,gc_estimate_form_shortcode,text,If using form plugin integration,yes
+Projects CPT,CPT: project,gc_project_service_category,taxonomy,Assign service_category terms,yes
+Projects CPT,CPT: project,gc_project_tags,taxonomy,Assign project_tag terms,yes
+Projects CPT,CPT: project,gc_project_location_city,text,,yes
+Projects CPT,CPT: project,gc_project_location_state,text,,yes
+Projects CPT,CPT: project,gc_project_short_summary,textarea,,yes
+Projects CPT,CPT: project,gc_project_has_design_image,true_false,,yes
+Projects CPT,CPT: project,gc_project_design_image,image,,yes
+Projects CPT,CPT: project,gc_project_gallery,gallery,,yes
+Projects CPT,CPT: project,gc_project_featured_on_home,true_false,,yes
+FAQ CPT,CPT: faq,gc_faq_answer,textarea,If title is used for the question,yes
+FAQ CPT,CPT: faq,gc_faq_group,taxonomy,faq_group taxonomy,yes
+Testimonials CPT (optional),CPT: testimonial,gc_testimonial_quote,textarea,,yes
+Testimonials CPT (optional),CPT: testimonial,gc_testimonial_first_name,text,,yes
+Testimonials CPT (optional),CPT: testimonial,gc_testimonial_last_initial,text,,yes
+Testimonials CPT (optional),CPT: testimonial,gc_testimonial_city,text,,yes
+Testimonials CPT (optional),CPT: testimonial,gc_testimonial_service_category,taxonomy,,yes

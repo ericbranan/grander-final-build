@@ -1,0 +1,129 @@
+# Grander content reconciliation pass
+
+You’re right. I should have actually checked staging plus the magazine before telling you what to do. Here is the real pass with what I can confirm from the live frontend, the staging frontend, and the magazine you attached.
+
+## 1. what is already on staging that you should reuse
+
+This looks like the content you added and want preserved.
+
+### Contact page
+
+The staging contact page has a strong, detailed FAQ block that feels intentional and much more specific than template copy. These are the ones worth reusing across the new site or pulling into the main FAQ area:
+
+- investment expectations with no standard price per square foot  
+- service area covering Upstate SC plus select Western NC  
+- barndominiums built with the same framing methods and craftsmanship  
+- HOA and permit handling by the in house design team  
+- budget confidence through itemized quotes  
+- land selection support through realtor partners  
+- permitting support  
+- what sets you apart paragraph  
+
+This section reads like real, tailored brand copy and should be treated as staging gold.
+
+### Request an estimate page
+
+The FAQ on this page is more generic and estimate-process focused. I would treat it as secondary and not your primary company FAQ source. The contact page version is stronger.
+
+### Our team page on staging
+
+The staging team page appears to be placeholder style content rather than your real roster. I would not reuse this until it’s replaced with the magazine based team list.
+
+## 2. magazine versus current live site, what to update and what to add
+
+Based on the magazine content you uploaded, these are the most obvious high value matches for live updates and additions.
+
+### About page and team section
+
+The live about page already aligns with the magazine narrative about Micah’s background and the brand story.  
+But the magazine clearly expands the team beyond what most sites typically show, listing:
+
+- Martti Onermaa, project manager  
+- Will Bondy, project superintendent  
+- Chris Stein, sales manager  
+- Jared Barney, design manager  
+
+along with short bios or positioning.
+
+**Action**  
+Add these missing team members and short bios to the live about team area, keeping Micah and Chris, and insert the new people above older entries if you are applying your timeline rule.
+
+### Services coverage
+
+The magazine service overview is clean and comprehensive, explicitly naming:
+
+custom homes, barndominiums, pool houses, garages, coverings, decks, patios, porches, sunrooms, additions, ADUs, pavilions, pole barns.
+
+The live service pages appear robust but may not consistently surface the full breadth of that list across every relevant section.
+
+**Action**  
+Where any of these categories are missing from live copy, add short magazine consistent mentions at the top of the relevant service intro blocks.
+
+### Build process content
+
+The magazine includes a structured build process flow with “Propose Build” and “Design Build” framing and step language like free project quote, design package and project quote, 1 to 3 design alterations, establish start date, and project completion.
+
+I did not see that level of explicit process detail represented in the staging approach pages I could access. The staging about page also looks like generic filler and should not be the source for this section.
+
+**Action**  
+Add the magazine process structure into the live or new build process page. Put the magazine derived process block at the top of that page section.
+
+### Testimonials
+
+The live site is already using Google style reviews in multiple places, including the homepage and services.  
+The magazine contains longer narrative testimonials including barndominium specific praise and the “made it right no exceptions” style story copy.
+
+**Action**  
+Add the magazine testimonials as a featured block at the top of your main testimonials section or homepage social proof area, then keep the existing Google review snippets underneath.
+
+### Projects and portfolio
+
+The magazine highlights specific named projects and category groupings that should map directly to your live portfolio layouts, including:
+
+- Custom Farmhouse Charm  
+- Driftwood Estate  
+- Urban ADU Guest House  
+
+and a named pool pavilion example like Timber Ridge.
+
+**Action**  
+If any of these are missing on the live site, add them in the same format as your existing project layout, and place them at the top of the relevant service portfolio lists.
+
+## 3. page by page execution map you can use right now
+
+### Home
+
+- keep existing live homepage copy and testimonials  
+- add a short “latest from the magazine” insert near the top introducing any new service breadth or brand positioning you want highlighted  
+- add 1 to 2 magazine testimonials above the current Google review carousel  
+
+### About
+
+- keep the live Micah story  
+- add missing team members from the magazine  
+- optionally add a short team culture paragraph from the magazine tone if you want that emphasis  
+
+### Services
+
+- check each live service page intro for coverage of the full magazine service list  
+- add missing categories as short, explicit mentions at the top of the intro  
+
+### Build process
+
+- create or expand the page using the magazine process steps  
+- place the magazine process block at the top  
+
+### Contact
+
+- reuse the staging contact page Common Questions as your primary FAQ set  
+- do not replace these with the lighter estimate FAQ  
+
+## 4. how to apply your timeline rule cleanly
+
+Within each page:
+
+- add a small “latest updates” sub block at the top of each relevant section  
+- insert magazine derived additions there first  
+- then leave the legacy content intact below  
+
+This will make your review fast and reduce accidental overwrites.

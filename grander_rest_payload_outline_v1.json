@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "version": "v1",
+    "notes": "Skeleton payload for scripted REST seeding. Replace __ID__ placeholders with real IDs. Use slugs for lookup in your script where possible."
+  },
+  "taxonomies": {
+    "service_category": [
+      {
+        "name": "Custom homes",
+        "slug": "custom-homes"
+      },
+      {
+        "name": "Outdoor spaces",
+        "slug": "outdoor-spaces"
+      },
+      {
+        "name": "Pool houses, garages, and ADUs",
+        "slug": "pool-houses-garages-adus"
+      },
+      {
+        "name": "Sunrooms and additions",
+        "slug": "sunrooms-additions"
+      }
+    ],
+    "project_tag": []
+  },
+  "options": {
+    "gc_announcement_enabled": false,
+    "gc_announcement_message": "",
+    "gc_announcement_button_label": "",
+    "gc_announcement_button_url": "",
+    "gc_announcement_style": "info",
+    "gc_service_area_enabled": true,
+    "gc_service_area_text": "Proudly serving the Upstate of South Carolina with custom homes and outdoor living.",
+    "gc_phone_number": "",
+    "gc_header_estimate_label": "Request an estimate",
+    "gc_header_estimate_mode": "lightbox",
+    "gc_header_estimate_url": "",
+    "gc_social_instagram_url": "",
+    "gc_social_facebook_url": "",
+    "gc_trust_items": [],
+    "gc_testimonials": [],
+    "gc_events_enabled": false,
+    "gc_events": [],
+    "gc_featured_projects_enabled": true,
+    "gc_featured_projects": []
+  },
+  "pages": {
+    "home": {
+      "acf": {
+        "gc_hero_headline": "Experience the art of building with grandeur",
+        "gc_hero_subline": "Custom homes and outdoor living spaces built with purpose across Upstate South Carolina.",
+        "gc_home_expert_offerings_intro": "Grander Construction brings custom homes and outdoor living spaces together under one design driven approach. From full scale builds to targeted additions, our team pairs refined craftsmanship with practical building science to create spaces that fit your lifestyle, elevate daily living, and stand up to the demands of time and climate.",
+        "gc_home_performance_teaser_headline": "Discover the art of custom home building in Upstate South Carolina",
+        "gc_home_performance_teaser_body": "Grander Construction believes homes should do more than look beautiful. High performance building brings healthier indoor air, better year round comfort, and lower long term energy costs. By combining advanced methods with durable materials, we build homes that last, protect your investment, and support a healthier way of living.",
+        "gc_home_testimonial_slider_variant": "v1"
+      }
+    },
+    "about-our-company": {
+      "acf": {
+        "gc_hero_headline": "Crafted for the way you live",
+        "gc_hero_subline": "A home should reflect the personality of its owner and the life that happens inside it."
+      }
+    },
+    "build-process": {
+      "acf": {
+        "gc_hero_headline": "The build process, made clear",
+        "gc_process_intro": "Every project is unique, but our process stays consistent. You will always know what comes next, what decisions are needed, and how your schedule is taking shape."
+      }
+    },
+    "performance-building": {
+      "acf": {
+        "gc_hero_headline": "High performance building, tailored for the Upstate"
+      }
+    },
+    "our-team": {
+      "acf": {
+        "gc_hero_headline": "Our experts, your vision",
+        "gc_team_intro": "At Grander Construction, our team is the foundation of everything we build. Each member brings unique expertise and a commitment to quality that lasts. From the office to the job site, we work as one team to deliver results clients can depend on.",
+        "gc_team_mission": "",
+        "gc_team_promise": "We promise to lead every build with clarity, craftsmanship, and care, delivering spaces that honor your vision and protect your investment."
+      }
+    },
+    "gallery": {
+      "acf": {
+        "gc_hero_headline": "Gallery",
+        "gc_gallery_intro": "A curated look at custom homes and outdoor living spaces built with purpose across the Upstate."
+      }
+    },
+    "contact": {
+      "acf": {
+        "gc_hero_headline": "Get in touch"
+      }
+    },
+    "request-an-estimate": {
+      "acf": {
+        "gc_hero_headline": "Request an estimate",
+        "gc_estimate_reassurance_copy": "Tell us about your project and we will provide clear next steps, realistic timelines, and thoughtful options that match your goals and budget."
+      }
+    }
+  },
+  "projects": [
+    {
+      "slug": "custom-farmhouse-charm",
+      "title": "Custom farmhouse charm",
+      "status": "publish",
+      "taxonomy": {
+        "service_category": [
+          "custom-homes"
+        ],
+        "project_tag": []
+      },
+      "acf": {
+        "gc_project_location_city": "Fountain Inn",
+        "gc_project_location_state": "SC",
+        "gc_project_short_summary": "Open concept custom farmhouse combining timeless board and batten character with modern comfort and expansive covered patio space.",
+        "gc_project_has_design_image": false,
+        "gc_project_gallery": []
+      }
+    },
+    {
+      "slug": "driftwood-estate",
+      "title": "Driftwood estate",
+      "status": "publish",
+      "taxonomy": {
+        "service_category": [
+          "sunrooms-additions"
+        ],
+        "project_tag": []
+      },
+      "acf": {
+        "gc_project_location_city": "Greer",
+        "gc_project_location_state": "SC",
+        "gc_project_short_summary": "Dual additions including a vaulted sunroom and covered patio plus a two stall garage addition that complements the existing home.",
+        "gc_project_has_design_image": false,
+        "gc_project_gallery": []
+      }
+    },
+    {
+      "slug": "urban-adu-guest-house",
+      "title": "Urban ADU guest house",
+      "status": "publish",
+      "taxonomy": {
+        "service_category": [
+          "pool-houses-garages-adus"
+        ],
+        "project_tag": []
+      },
+      "acf": {
+        "gc_project_location_city": "Greenville",
+        "gc_project_location_state": "SC",
+        "gc_project_short_summary": "Compact guest house with front porch, kitchenette, and efficient living design.",
+        "gc_project_has_design_image": false,
+        "gc_project_gallery": []
+      }
+    }
+  ],
+  "testimonials_seed": [
+    {
+      "first_name": "Sallie",
+      "last_initial": "B",
+      "quote": "Micah and his team treat construction as a process, not a one time event. They solved issues quickly and fairly and delivered a result we trust."
+    },
+    {
+      "first_name": "Kim",
+      "last_initial": "H",
+      "quote": "Our pool house and storage build was meticulous from day one. The craftsmanship exceeded expectations."
+    },
+    {
+      "first_name": "David",
+      "last_initial": "R",
+      "quote": "Grander delivered a multi level covered patio other contractors could not solve. The carpentry and masonry are outstanding."
+    },
+    {
+      "first_name": "Ashley",
+      "last_initial": "M",
+      "quote": "Clear communication, proactive updates, and a finished space that feels custom in every detail."
+    }
+  ],
+  "faq_seed": {
+    "build-process": [
+      {
+        "question": "What are the main phases of the Grander build process?",
+        "answer": "The five core phases are listed above. Exact steps can vary based on project type, complexity, site conditions, and product availability."
+      },
+      {
+        "question": "How long will my project take?",
+        "answer": "Expect a realistic timeline from start to finish at the time of your estimate, with clear milestone updates as the project progresses."
+      }
+    ]
+  },
+  "blog_new_drafts": [
+    {
+      "title": "What high performance building means for Upstate homes",
+      "status": "draft"
+    },
+    {
+      "title": "Designing outdoor living spaces that feel integrated",
+      "status": "draft"
+    },
+    {
+      "title": "Sunrooms vs additions which fits your lifestyle",
+      "status": "draft"
+    },
+    {
+      "title": "Pool houses, garages, and ADUs that add real value",
+      "status": "draft"
+    },
+    {
+      "title": "A clear look at the Grander build process",
+      "status": "draft"
+    }
+  ]
+}

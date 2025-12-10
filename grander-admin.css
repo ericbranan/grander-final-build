@@ -1,0 +1,464 @@
+/**
+ * Grander Admin CSS
+ *
+ * Styles for the Grander Settings ACF options pages in WordPress admin.
+ * Creates a polished, app-like experience while respecting WordPress conventions.
+ *
+ * Design Goals:
+ * - Clean, modern UI with card-based sections
+ * - Uses Grander brand colors subtly
+ * - Compatible with WordPress admin light and dark modes
+ * - Responsive across admin widths
+ * - Maintains ACF field accessibility
+ *
+ * Target Screen: toplevel_page_grander-settings
+ *
+ * @package Grander_Core
+ * @since 1.2.0
+ */
+
+/* ==========================================================================
+   Admin Color Variables
+   These adapt to work with WordPress admin themes
+   ========================================================================== */
+
+:root {
+    /* Grander brand colors (subtle use in admin) */
+    --gc-admin-gold: #B08D66;
+    --gc-admin-gold-light: #D4BC9A;
+    --gc-admin-brown: #4C2A19;
+    --gc-admin-brown-light: #5C4A3D;
+
+    /* Admin UI colors */
+    --gc-admin-bg: #f0f0f1;
+    --gc-admin-card: #ffffff;
+    --gc-admin-border: #c3c4c7;
+    --gc-admin-border-light: #e0e0e0;
+    --gc-admin-text: #1d2327;
+    --gc-admin-text-muted: #50575e;
+    --gc-admin-shadow: rgba(0, 0, 0, 0.05);
+
+    /* Spacing */
+    --gc-admin-spacing-xs: 8px;
+    --gc-admin-spacing-sm: 12px;
+    --gc-admin-spacing-md: 16px;
+    --gc-admin-spacing-lg: 24px;
+    --gc-admin-spacing-xl: 32px;
+
+    /* Border radius */
+    --gc-admin-radius: 8px;
+    --gc-admin-radius-sm: 4px;
+}
+
+/* Dark admin color scheme support */
+body.admin-color-modern,
+body.admin-color-midnight,
+body.admin-color-coffee,
+body.admin-color-ectoplasm,
+body.admin-color-ocean,
+body.admin-color-sunrise {
+    --gc-admin-bg: #1d2327;
+    --gc-admin-card: #2c3338;
+    --gc-admin-border: #3c434a;
+    --gc-admin-border-light: #50575e;
+    --gc-admin-text: #f0f0f1;
+    --gc-admin-text-muted: #a7aaad;
+    --gc-admin-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Page Wrapper
+   Main container for the Grander Settings page
+   ========================================================================== */
+
+.gc-admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gc-admin-spacing-lg);
+}
+
+/* Page header with title and description */
+.gc-admin-header {
+    margin-bottom: var(--gc-admin-spacing-xl);
+    padding-bottom: var(--gc-admin-spacing-lg);
+    border-bottom: 1px solid var(--gc-admin-border-light);
+}
+
+.gc-admin-header__title {
+    display: flex;
+    align-items: center;
+    gap: var(--gc-admin-spacing-sm);
+    margin: 0 0 var(--gc-admin-spacing-xs);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gc-admin-text);
+}
+
+.gc-admin-header__title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 28px;
+    background: var(--gc-admin-gold);
+    border-radius: 3px;
+}
+
+.gc-admin-header__description {
+    margin: 0;
+    font-size: 14px;
+    color: var(--gc-admin-text-muted);
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   Module Navigation
+   Quick links to different settings sections
+   ========================================================================== */
+
+.gc-admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gc-admin-spacing-sm);
+    margin-bottom: var(--gc-admin-spacing-xl);
+    padding: var(--gc-admin-spacing-md);
+    background: var(--gc-admin-card);
+    border: 1px solid var(--gc-admin-border-light);
+    border-radius: var(--gc-admin-radius);
+}
+
+.gc-admin-nav__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gc-admin-spacing-xs);
+    padding: var(--gc-admin-spacing-xs) var(--gc-admin-spacing-md);
+    background: transparent;
+    border: 1px solid var(--gc-admin-border);
+    border-radius: var(--gc-admin-radius-sm);
+    color: var(--gc-admin-text);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.gc-admin-nav__item:hover {
+    background: var(--gc-admin-gold-light);
+    border-color: var(--gc-admin-gold);
+    color: var(--gc-admin-brown);
+}
+
+.gc-admin-nav__item:hover .gc-admin-nav__icon {
+    opacity: 1;
+}
+
+.gc-admin-nav__item:focus {
+    outline: 2px solid var(--gc-admin-gold);
+    outline-offset: 2px;
+}
+
+.gc-admin-nav__item:focus-visible {
+    outline: 2px solid var(--gc-admin-gold);
+    outline-offset: 2px;
+}
+
+.gc-admin-nav__item--active {
+    background: var(--gc-admin-gold);
+    border-color: var(--gc-admin-gold);
+    color: var(--gc-admin-brown);
+}
+
+.gc-admin-nav__item--active .gc-admin-nav__icon {
+    opacity: 1;
+}
+
+.gc-admin-nav__icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    transition: opacity 0.15s ease;
+}
+
+/* ==========================================================================
+   ACF Form Wrapper Enhancements
+   Styles applied to the ACF form container
+   ========================================================================== */
+
+/* Target the ACF options form on our page */
+.toplevel_page_grander-settings .acf-form {
+    background: transparent;
+}
+
+.toplevel_page_grander-settings #poststuff {
+    padding-top: 0;
+}
+
+.toplevel_page_grander-settings .acf-postbox {
+    background: var(--gc-admin-card);
+    border: 1px solid var(--gc-admin-border-light);
+    border-radius: var(--gc-admin-radius);
+    box-shadow: 0 1px 3px var(--gc-admin-shadow);
+    margin-bottom: var(--gc-admin-spacing-lg);
+    overflow: hidden;
+}
+
+/* ACF Group Headers (Tabs become section headers) */
+.toplevel_page_grander-settings .acf-postbox .postbox-header,
+.toplevel_page_grander-settings .acf-postbox > h2,
+.toplevel_page_grander-settings .acf-postbox > .hndle {
+    background: linear-gradient(to right, var(--gc-admin-gold-light), transparent);
+    border-bottom: 1px solid var(--gc-admin-border-light);
+    padding: var(--gc-admin-spacing-md) var(--gc-admin-spacing-lg);
+    margin: 0;
+}
+
+.toplevel_page_grander-settings .acf-postbox .postbox-header h2,
+.toplevel_page_grander-settings .acf-postbox > h2 span,
+.toplevel_page_grander-settings .acf-postbox > .hndle span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gc-admin-brown);
+}
+
+/* ACF Field Groups */
+.toplevel_page_grander-settings .acf-fields {
+    padding: var(--gc-admin-spacing-md);
+}
+
+.toplevel_page_grander-settings .acf-field {
+    padding: var(--gc-admin-spacing-md);
+    border-bottom: 1px solid var(--gc-admin-border-light);
+}
+
+.toplevel_page_grander-settings .acf-field:last-child {
+    border-bottom: none;
+}
+
+/* ACF Labels */
+.toplevel_page_grander-settings .acf-label label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gc-admin-text);
+    margin-bottom: var(--gc-admin-spacing-xs);
+}
+
+.toplevel_page_grander-settings .acf-label .description {
+    font-size: 12px;
+    color: var(--gc-admin-text-muted);
+    margin-top: 4px;
+}
+
+/* ACF Inputs */
+.toplevel_page_grander-settings .acf-input input[type="text"],
+.toplevel_page_grander-settings .acf-input input[type="url"],
+.toplevel_page_grander-settings .acf-input input[type="email"],
+.toplevel_page_grander-settings .acf-input input[type="number"],
+.toplevel_page_grander-settings .acf-input textarea,
+.toplevel_page_grander-settings .acf-input select {
+    border-radius: var(--gc-admin-radius-sm);
+    border-color: var(--gc-admin-border);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.toplevel_page_grander-settings .acf-input input:focus,
+.toplevel_page_grander-settings .acf-input textarea:focus,
+.toplevel_page_grander-settings .acf-input select:focus {
+    border-color: var(--gc-admin-gold);
+    box-shadow: 0 0 0 2px rgba(176, 141, 102, 0.2);
+    outline: none;
+}
+
+/* ACF True/False Toggle */
+.toplevel_page_grander-settings .acf-true-false .acf-switch {
+    border-radius: 12px;
+}
+
+.toplevel_page_grander-settings .acf-true-false .acf-switch.-on {
+    background: var(--gc-admin-gold);
+    border-color: var(--gc-admin-gold);
+}
+
+/* ACF Repeater */
+.toplevel_page_grander-settings .acf-repeater .acf-row {
+    background: var(--gc-admin-bg);
+    border-radius: var(--gc-admin-radius-sm);
+    margin-bottom: var(--gc-admin-spacing-sm);
+}
+
+.toplevel_page_grander-settings .acf-repeater .acf-row-handle {
+    background: var(--gc-admin-border-light);
+}
+
+/* ACF Tab Navigation */
+.toplevel_page_grander-settings .acf-tab-wrap {
+    background: var(--gc-admin-card);
+    border-bottom: 1px solid var(--gc-admin-border-light);
+    padding: 0 var(--gc-admin-spacing-md);
+}
+
+.toplevel_page_grander-settings .acf-tab-group {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toplevel_page_grander-settings .acf-tab-group li a {
+    display: block;
+    padding: var(--gc-admin-spacing-sm) var(--gc-admin-spacing-md);
+    color: var(--gc-admin-text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.toplevel_page_grander-settings .acf-tab-group li a:hover {
+    color: var(--gc-admin-text);
+    background: rgba(176, 141, 102, 0.05);
+}
+
+.toplevel_page_grander-settings .acf-tab-group li.active a {
+    color: var(--gc-admin-gold);
+    border-bottom-color: var(--gc-admin-gold);
+}
+
+/* ==========================================================================
+   Section Dividers
+   Visual separation between major field groups
+   ========================================================================== */
+
+.gc-admin-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--gc-admin-spacing-md);
+    margin: var(--gc-admin-spacing-xl) 0;
+    color: var(--gc-admin-text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gc-admin-divider::before,
+.gc-admin-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gc-admin-border-light);
+}
+
+/* ==========================================================================
+   Info Cards
+   Contextual help and tips
+   ========================================================================== */
+
+.gc-admin-info {
+    display: flex;
+    gap: var(--gc-admin-spacing-md);
+    padding: var(--gc-admin-spacing-md);
+    background: rgba(176, 141, 102, 0.08);
+    border-left: 3px solid var(--gc-admin-gold);
+    border-radius: var(--gc-admin-radius-sm);
+    margin-bottom: var(--gc-admin-spacing-md);
+}
+
+.gc-admin-info__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--gc-admin-gold);
+}
+
+.gc-admin-info__content {
+    flex: 1;
+}
+
+.gc-admin-info__title {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gc-admin-text);
+}
+
+.gc-admin-info__text {
+    margin: 0;
+    font-size: 12px;
+    color: var(--gc-admin-text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Submit Button Enhancement
+   ========================================================================== */
+
+.toplevel_page_grander-settings #publishing-action .button-primary,
+.toplevel_page_grander-settings .acf-form-submit input[type="submit"] {
+    background: var(--gc-admin-brown);
+    border-color: var(--gc-admin-brown);
+    color: #ffffff;
+    padding: 8px 24px;
+    font-weight: 600;
+    border-radius: var(--gc-admin-radius-sm);
+    transition: all 0.15s ease;
+}
+
+.toplevel_page_grander-settings #publishing-action .button-primary:hover,
+.toplevel_page_grander-settings .acf-form-submit input[type="submit"]:hover {
+    background: var(--gc-admin-gold);
+    border-color: var(--gc-admin-gold);
+    color: var(--gc-admin-brown);
+}
+
+.toplevel_page_grander-settings #publishing-action .button-primary:focus,
+.toplevel_page_grander-settings .acf-form-submit input[type="submit"]:focus {
+    box-shadow: 0 0 0 3px rgba(176, 141, 102, 0.5);
+    outline: none;
+}
+
+.toplevel_page_grander-settings #publishing-action .button-primary:focus-visible,
+.toplevel_page_grander-settings .acf-form-submit input[type="submit"]:focus-visible {
+    box-shadow: 0 0 0 3px rgba(176, 141, 102, 0.5);
+    outline: 2px solid var(--gc-admin-gold);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+    .gc-admin-page {
+        padding: var(--gc-admin-spacing-md);
+    }
+
+    .gc-admin-header__title {
+        font-size: 22px;
+    }
+
+    .gc-admin-nav {
+        flex-direction: column;
+    }
+
+    .gc-admin-nav__item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .toplevel_page_grander-settings .acf-field {
+        padding: var(--gc-admin-spacing-sm);
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .gc-admin-nav,
+    .gc-admin-header {
+        display: none;
+    }
+}

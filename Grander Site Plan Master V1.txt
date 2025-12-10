@@ -1,0 +1,594 @@
+Grander Construction site plan master document
+
+This document compiles the working plan for the Grander Construction website rebuild using Elementor, ACF Pro, and future REST API content seeding. It is organized page by page and section by section, with reusable modules, global styles, and content drafts.
+
+It is written to be a single source of truth you can hand to Angie and Claude for parallel build out.
+
+
+----------------------------------------
+
+
+1. Global design system
+
+1.1 Brand positioning and tone
+
+Core brand idea to preserve and amplify
+
+- Grandeur by Design. Built with Purpose.  
+- High end but approachable, craftsmanship forward  
+- Local authority for Upstate South Carolina custom homes and outdoor living
+
+The magazine frames the company as Midwestern standards brought to the Upstate with a focus on craftsmanship, integrity, faith, and proven building science. fileciteturn8file0L51-L63
+
+1.2 Color system
+
+Use the previously defined Grander palette in Elementor Global Colors. If your last saved palette is lost, re establish with this structure
+
+1. Primary dark  
+2. Primary light  
+3. Accent gold  
+4. Neutral warm  
+5. Neutral cool  
+6. Background light  
+7. Background dark  
+8. Border subtle  
+9. Text primary  
+10. Text secondary
+
+This list is intentionally structural so you can map exact hex values you already used before without overthinking.
+
+1.3 Typography system
+
+Use Adobe Typekit fonts
+
+- Baskerville for headings and premium moments
+- Corbel for body and UI
+
+Recommended global styles for Angie to re apply quickly
+
+Headings, Baskerville
+
+- H1: 56px size, 1.15 line height, 0.5px letter spacing  
+  Tablet 40px, Mobile 32px  
+- H2: 40px size, 1.2 line height  
+  Tablet 32px, Mobile 26px  
+- H3: 30px size, 1.25 line height  
+  Tablet 26px, Mobile 22px  
+- H4: 24px size, 1.3 line height  
+- H5: 20px size, 1.35 line height  
+- H6: 18px size, 1.4 line height  
+
+Body, Corbel
+
+- Body large: 20px size, 1.6 line height  
+- Body: 18px size, 1.6 line height  
+- Body small: 16px size, 1.55 line height  
+- Caption and meta: 14px size, 1.4 line height
+
+Buttons and UI
+
+- Button text: Corbel 16px semibold, letter spacing 0.5px  
+- Uppercase optional
+
+1.4 Spacing and layout defaults
+
+- Section vertical padding desktop 90 to 110px  
+- Tablet 70 to 90px  
+- Mobile 50 to 70px
+- Max content width 1140 to 1240px  
+- Use consistent gap tokens: 8, 12, 16, 24, 32, 48
+
+1.5 Motion and interaction defaults
+
+Remove legacy heavy page transitions. Keep micro motion
+
+- 150 to 220ms ease for button hover, cards, and small reveals
+- Respect prefers reduced motion
+- Use subtle parallax only in hero blocks where it adds depth
+
+1.6 Accessibility baseline
+
+- Contrast checks on hero overlays  
+- Focus states on all interactive elements  
+- Alt text required on portfolio and gallery imagery  
+- Avoid text baked into images
+
+
+----------------------------------------
+
+
+2. Global UI components and reusable modules
+
+2.1 Primary buttons
+
+Define global button styles
+
+- Primary filled
+- Secondary outline
+- Tertiary text link
+
+Shared rules
+
+- 10 to 14px vertical padding
+- 22 to 28px horizontal padding
+- 6 to 10px radius depending on existing brand shape
+- Hover: slight elevation, slight darken or lighten
+
+2.2 Trust bar
+
+Purpose  
+A thin horizontal bar that quickly broadcasts credibility signals above the fold
+
+Recommended contents
+
+- Home Builders Association badge  
+- Better Business Bureau badge  
+- Years of experience or local service note  
+- High performance build science callout
+
+This can be an Elementor template inserted under hero sections and toggled per page
+
+2.3 Sitewide announcement bar
+
+ACF option fields
+
+- enabled boolean
+- message text
+- optional link label
+- optional link URL
+- style variant
+
+2.4 Featured projects picker
+
+ACF option field that lets admin select 3 to 6 projects to feature on Home and key Services
+
+Fields
+
+- enabled boolean
+- relationship to Projects CPT or repeater objects
+- display style choice
+
+2.5 Consistent service area microline
+
+Draft  
+“Proudly serving the Upstate of South Carolina with custom homes and outdoor living.”
+
+2.6 Structured FAQ system
+
+ACF architecture
+
+- Global FAQ repository
+- Page level FAQ relationship field
+- Section level overrides
+
+Fields
+
+- question
+- answer
+- category tags
+- service page associations
+
+Goal  
+Pull relevant FAQs into Service pages, Team, Build Process, and Contact while letting Contact keep its core set as the canonical pre fill
+
+2.7 Testimonials system
+
+ACF option fields
+
+- testimonial quote
+- customer first name
+- customer last initial
+- city optional
+- project type optional
+- source label optional
+
+Seed initial testimonials from the magazine quotes for now. fileciteturn8file0L361-L390
+
+2.8 Social feed module
+
+Low effort, high return
+
+- Single feed that alternates and links out to both IG and FB
+- If tooling complexity is high, start with Instagram only
+
+2.9 Events micro module
+
+ACF option repeater
+
+- enabled boolean
+- event title
+- location
+- date
+- time
+- short description
+- button label
+- button URL
+
+Display
+
+- Home page near bottom
+- Optional small strip on Contact page
+
+2.10 Search results styling
+
+Create a lightweight template for search results
+
+- Clear “Results for …” heading
+- Card like summaries
+- Filter chips if supported
+
+2.11 404 page
+
+Ensure the custom back button JS is preserved. Add
+
+- Search field
+- Quick links to top Services
+- Featured Projects picker
+
+
+----------------------------------------
+
+
+3. Header and navigation
+
+3.1 Behavior and layout
+
+Goals
+
+- Two layer header system  
+  1. A white top stripe containing logo, search icon, main CTAs  
+  2. A transparent overlay menu that can sit over hero imagery
+
+Fix
+
+- The white stripe must remain sticky with the logo and CTAs
+- Overlay text color should auto switch based on hero luminance using two style variants and a per page toggle
+
+3.2 Mobile rules
+
+- Remove text based Call now from top bar on mobile
+- Add floating phone icon bottom right
+- Keep Request an estimate in the hamburger menu
+- Hamburger menu must show full menu hierarchy
+
+
+----------------------------------------
+
+
+4. Footer
+
+Design goals
+
+- Dark background
+- Zigzag pattern top border similar to the current live site
+- Include logos and trust marks plus social and contact essentials
+
+
+----------------------------------------
+
+
+5. Forms and the estimate lightbox system
+
+5.1 Strategy
+
+A dedicated Request an estimate page is not strictly redundant, but for a premium feel the primary interaction should be a sitewide lightbox
+
+Recommendation
+
+- Keep the page for SEO and fallback
+- Use the lightbox as the main conversion path
+
+5.2 Technical build
+
+Create an Elementor template
+
+- Estimate form container
+
+Use ACF options for shared defaults
+
+Embed
+
+- as lightbox
+- as inline module on Home
+- as mid page CTA on Services
+
+5.3 Lightbox layout content
+
+Title options
+
+- “Request an estimate”
+- “Start your project”
+- “Let’s build something great”
+
+Supporting line  
+“Share a few details and our team will follow up with a realistic timeline and next steps.”
+
+Form fields
+
+- name
+- email
+- phone
+- preferred contact method
+- project type dropdown aligned with service taxonomy
+- location
+- rough budget optional
+- target start timeframe
+- message
+
+Trust microline  
+“Clear communication. Thoughtful design. Built with purpose.”
+
+
+----------------------------------------
+
+
+6. Page by page plan
+
+6.1 Home
+
+Primary goals
+
+- Immediate clarity on what Grander builds
+- Smooth path to estimate
+- Showcase premium craft and high performance
+
+Sections
+
+1. Hero  
+   - “Experience the art of building with grandeur.”  
+   - Subtle animation emphasizing the word Grander
+
+2. Expert offerings intro  
+   Draft copy  
+   “From custom homes to elevated outdoor living, Grander Construction designs and builds spaces that fit the way you live. Our team blends thoughtful planning, skilled craftsmanship, and proven building science to create projects that feel personal, perform beautifully, and stand the test of time.”
+
+3. Four service type blocks  
+   - Keep structure, redesign layout to feel cleaner
+
+4. Testimonials preview  
+   - Pull from global Testimonials ACF
+
+5. Performance building teaser  
+   - Use Build Science brochure content as the basis  
+   - Core message from brochure about comfort, healthy air, and lower energy costs. fileciteturn7file5L8-L22
+
+6. Request an estimate inline form  
+7. Featured projects  
+8. Social feed  
+9. Events strip  
+10. Footer
+
+
+----------------------------------------
+
+
+6.2 About our company
+
+Hero
+
+Title draft  
+“Crafted for the way you live”
+
+Sub line  
+“Every home and outdoor space is a reflection of its owner. Our role is to bring that individuality to life with clarity, craftsmanship, and purpose.”
+
+Story blocks  
+Incorporate magazine About and mission narrative
+
+Key facts to preserve  
+- Founded by Micah Barney  
+- Midwestern standards and proven building science brought to the Upstate  
+- Integrity, faith, genuine care for families fileciteturn8file0L51-L63
+
+Mission statement  
+Use the magazine mission text as the baseline. fileciteturn8file0L67-L81
+
+Values  
+Use the trio implied across the team section. fileciteturn8file0L134-L137
+
+
+----------------------------------------
+
+
+6.3 Build process
+
+The magazine provides a clear high level flow we can convert into a sleek process graphic overlay. fileciteturn8file0L325-L358
+
+Section outline
+
+1. Hero  
+   “A clear path from idea to completion”
+
+2. The five phase overview  
+   - Phone call  
+   - Consultation  
+   - Design package and project quote  
+   - Establish start date  
+   - Project completion
+
+3. What to expect  
+   - You will receive a realistic timeline at the time of your estimate  
+   - Transparent communication from start to finish
+
+4. Build process FAQs  
+   - Dedicated category
+
+
+----------------------------------------
+
+
+6.4 Performance building
+
+Base copy source  
+Build Science brochure
+
+Key points to preserve include healthier indoor air, greater comfort, lower energy costs, and specific build science practices. fileciteturn7file5L8-L22 fileciteturn7file5L31-L60
+
+Recommended sections
+
+1. Hero  
+2. Why build smart overview  
+3. Three pillar benefits  
+4. Build science practices graphic  
+5. FAQ  
+6. CTA
+
+
+----------------------------------------
+
+
+6.5 Services landing or archive
+
+Pull the magazine Services overview blurb as the base tone. fileciteturn8file0L151-L156
+
+
+----------------------------------------
+
+
+6.6 Service template pages
+
+These four pages share a template
+
+- Custom homes  
+- Outdoor spaces  
+- Pool houses, garages, and ADUs  
+- Sunrooms and additions
+
+Template sections
+
+1. Hero  
+2. Jump links  
+3. Service scope explanation  
+4. Featured projects carousel  
+5. Project portfolio sections with design image toggle  
+6. Micro CTA  
+7. Category specific FAQs
+
+
+----------------------------------------
+
+
+6.7 Our team
+
+Hero overlay title options
+
+- “The people behind the craft”
+- “Meet the team”
+- “Your vision, our experts”
+
+Intro copy seed  
+Use magazine tone. fileciteturn8file0L134-L137
+
+Team member layout  
+ACF repeater with highlight owner boolean
+
+Seed list  
+Micah Barney, Martti Onermaa, Will Bondy, Chris Stein, Jared Barney. fileciteturn8file0L116-L125
+
+Mission and promise on this page per your decision
+
+Promise draft  
+“We promise clear communication, thoughtful design, and craftsmanship that honors your home, your budget, and your timeline.”
+
+
+----------------------------------------
+
+
+6.8 Gallery
+
+Hero needs subtle background pattern
+
+Filterable gallery  
+Use taxonomy driven filters aligned to your categories and tags
+
+
+----------------------------------------
+
+
+6.9 Blog
+
+Branding  
+“The Blueprint”
+
+Content fixes  
+Backfill missing body copy from older posts
+
+New posts to draft now
+
+1. What high performance building really means for Upstate homeowners  
+2. Designing outdoor spaces that work in every season  
+3. How to plan a custom home budget without losing your mind  
+4. Sunrooms vs additions which fits your lifestyle  
+5. Garage, pool house, or ADU choosing the right extra space  
+6. The Grander build process from first call to final walk through
+
+
+----------------------------------------
+
+
+6.10 Contact
+
+Add embedded map under the Call now block
+
+Remove redundant secondary CTA block
+
+Use Contact Common questions as the canonical seed for the global FAQ library
+
+
+----------------------------------------
+
+
+6.11 Request an estimate page
+
+Keep as a styled landing page that mirrors the lightbox content
+
+
+----------------------------------------
+
+
+7. Project content starter set and ordering
+
+Insert these magazine highlighted projects as the newest top items
+
+1. Custom Farmhouse Charm, Fountain Inn, SC fileciteturn8file0L186-L194
+2. Driftwood Estate, Greer, SC fileciteturn8file0L201-L207
+3. Urban ADU Guest House, Greenville, SC fileciteturn8file0L211-L215
+4. Bunker Hill Sunroom Addition, Greer, SC fileciteturn8file0L222-L227
+5. Spaulding Farms Backyard Retreat, Greenville, SC fileciteturn8file0L230-L236
+6. Contemporary Barndominium Retreat, Spartanburg, SC fileciteturn8file0L249-L257
+7. Covered Patio Grandeur, Simpsonville, SC fileciteturn8file0L260-L266
+8. Timber Ridge Pool Pavilion, Simpsonville, SC fileciteturn8file0L273-L279
+
+
+----------------------------------------
+
+
+8. REST API readiness checklist
+
+- Prefer repeaters with clear object schemas
+- Enable show_in_rest on CPTs
+- Plan for ACF to REST integration
+
+
+----------------------------------------
+
+
+9. Quick build order
+
+1. Re apply global fonts and colors  
+2. Fix header sticky and mobile behavior  
+3. Build estimate form container plus lightbox  
+4. Implement ACF frameworks  
+5. Home page  
+6. Services template plus four service pages  
+7. About, Team, Build Process  
+8. Gallery filters  
+9. Blog refresh  
+10. Search results plus 404  
+11. Footer polish
+
+
+----------------------------------------
+
+
+End of document.
