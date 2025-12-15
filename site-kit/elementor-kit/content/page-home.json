@@ -1,0 +1,1688 @@
+{
+  "version": "0.4",
+  "title": "Home",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "min_height": {
+          "unit": "vh",
+          "size": 100,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "60",
+          "bottom": "0",
+          "left": "60",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "0",
+          "right": "20",
+          "bottom": "0",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#2C2C2C",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(0,0,0,0.4)",
+        "css_classes": "gc-hero gc-hero--home"
+      },
+      "elements": [
+        {
+          "id": "hero-content",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 900,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "hero-eyebrow",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Nashville's Premier Custom Home Builder",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 3,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "hero-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Build Without Compromise",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#FDFBF8",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 72,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.1,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "hero-subheading",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center;\">For over 20 years, we've been crafting custom homes and outdoor spaces that exceed expectations. From concept to completion, we build your vision with uncompromising quality.</p>",
+                "text_color": "rgba(253, 251, 248, 0.9)",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.7,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "width": {
+                  "unit": "px",
+                  "size": 700,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "hero-buttons",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_justify_content": "center",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "hero-cta-primary",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Request an Estimate",
+                    "link": {
+                      "url": "/request-an-estimate/",
+                      "custom_attributes": "data-gc-estimate-trigger:true"
+                    },
+                    "size": "lg",
+                    "button_text_color": "#FDFBF8",
+                    "background_color": "#B08D66",
+                    "button_text_color_hover": "#FDFBF8",
+                    "button_background_hover_color": "#8B6F4E",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Corbel",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "2",
+                      "bottom": "2",
+                      "left": "2",
+                      "isLinked": true
+                    },
+                    "border_color": "#B08D66",
+                    "button_padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "40",
+                      "bottom": "18",
+                      "left": "40",
+                      "isLinked": false
+                    },
+                    "css_classes": "gc-btn gc-btn--primary gc-estimate-trigger"
+                  }
+                },
+                {
+                  "id": "hero-cta-secondary",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "View Our Work",
+                    "link": {
+                      "url": "/gallery/"
+                    },
+                    "size": "lg",
+                    "button_text_color": "#FDFBF8",
+                    "background_color": "transparent",
+                    "button_text_color_hover": "#B08D66",
+                    "button_background_hover_color": "transparent",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Corbel",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "2",
+                      "bottom": "2",
+                      "left": "2",
+                      "isLinked": true
+                    },
+                    "border_color": "#FDFBF8",
+                    "button_padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "40",
+                      "bottom": "18",
+                      "left": "40",
+                      "isLinked": false
+                    },
+                    "css_classes": "gc-btn gc-btn--outline-light"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hero-scroll",
+          "elType": "widget",
+          "widgetType": "icon",
+          "settings": {
+            "selected_icon": {
+              "value": "fas fa-chevron-down",
+              "library": "fa-solid"
+            },
+            "align": "center",
+            "primary_color": "#FDFBF8",
+            "size": {
+              "unit": "px",
+              "size": 24,
+              "sizes": []
+            },
+            "_position": "absolute",
+            "_offset_orientation_v": "end",
+            "_offset_y": {
+              "unit": "px",
+              "size": 40,
+              "sizes": []
+            },
+            "css_classes": "gc-scroll-indicator"
+          }
+        }
+      ]
+    },
+    {
+      "id": "trust-bar",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1000,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_justify_content": "space-around",
+        "flex_align_items": "center",
+        "flex_wrap": "wrap",
+        "padding": {
+          "unit": "px",
+          "top": "40",
+          "right": "40",
+          "bottom": "40",
+          "left": "40",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F0E8"
+      },
+      "elements": [
+        {
+          "id": "trust-item-1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "15",
+              "right": "25",
+              "bottom": "15",
+              "left": "25",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "trust-number-1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "20+",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "trust-label-1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Years of Excellence",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "500"
+              }
+            }
+          ]
+        },
+        {
+          "id": "trust-item-2",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "15",
+              "right": "25",
+              "bottom": "15",
+              "left": "25",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "trust-number-2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "500+",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "trust-label-2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Projects Completed",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "500"
+              }
+            }
+          ]
+        },
+        {
+          "id": "trust-item-3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "15",
+              "right": "25",
+              "bottom": "15",
+              "left": "25",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "trust-number-3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "100%",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "trust-label-3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Client Satisfaction",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "500"
+              }
+            }
+          ]
+        },
+        {
+          "id": "trust-item-4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "padding": {
+              "unit": "px",
+              "top": "15",
+              "right": "25",
+              "bottom": "15",
+              "left": "25",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "trust-number-4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Licensed",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "trust-label-4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "& Fully Insured",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "500"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intro-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 80,
+          "sizes": []
+        },
+        "flex_wrap": "wrap",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "40",
+          "bottom": "120",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FDFBF8"
+      },
+      "elements": [
+        {
+          "id": "intro-content",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 50,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center"
+          },
+          "elements": [
+            {
+              "id": "intro-eyebrow",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "About Grander",
+                "header_size": "h6",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "intro-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Building Dreams Into Reality Since 2003",
+                "header_size": "h2",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "intro-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Grander Construction has spent over two decades perfecting the art of custom home building in Middle Tennessee. We believe that building a home should be an exciting journey, not a stressful ordeal.</p><p>Our approach combines old-world craftsmanship with modern building science, ensuring every home we build is not just beautiful, but built to last for generations.</p>",
+                "text_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.7,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "intro-button",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Learn About Us",
+                "link": {
+                  "url": "/about-our-company/"
+                },
+                "size": "md",
+                "button_text_color": "#4C2A19",
+                "background_color": "transparent",
+                "button_text_color_hover": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#4C2A19",
+                "button_padding": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "28",
+                  "bottom": "14",
+                  "left": "28",
+                  "isLinked": false
+                },
+                "css_classes": "gc-btn gc-btn--outline"
+              }
+            }
+          ]
+        },
+        {
+          "id": "intro-image",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 45,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "intro-img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "",
+                  "id": ""
+                },
+                "image_size": "large",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#B08D66"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "40",
+          "bottom": "120",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F0E8"
+      },
+      "elements": [
+        {
+          "id": "services-header",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "margin": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "60",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "services-eyebrow",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "What We Build",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "services-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Our Services",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "services-grid",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_gap": {
+              "unit": "px",
+              "size": 30,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "service-card-1",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "auto",
+                "width": {
+                  "unit": "%",
+                  "size": 48,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "30",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#B08D66",
+                "css_classes": "gc-service-card"
+              },
+              "elements": [
+                {
+                  "id": "service-img-1",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "",
+                      "id": ""
+                    },
+                    "image_size": "large",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "service-content-1",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "0",
+                      "left": "30",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "service-title-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Custom Homes",
+                        "header_size": "h3",
+                        "title_color": "#4C2A19",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Libre Baskerville",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-desc-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>From modern farmhouses to traditional estates, we bring your vision to life with meticulous attention to detail.</p>",
+                        "text_color": "#6B4532",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-link-1",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Learn More →",
+                        "link": {
+                          "url": "/custom-homes/"
+                        },
+                        "size": "xs",
+                        "button_text_color": "#B08D66",
+                        "background_color": "transparent",
+                        "button_text_color_hover": "#8B6F4E",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "border_border": "none",
+                        "button_padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "service-card-2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "auto",
+                "width": {
+                  "unit": "%",
+                  "size": 48,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "30",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#B08D66",
+                "css_classes": "gc-service-card"
+              },
+              "elements": [
+                {
+                  "id": "service-img-2",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "",
+                      "id": ""
+                    },
+                    "image_size": "large",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "service-content-2",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "0",
+                      "left": "30",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "service-title-2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Outdoor Spaces",
+                        "header_size": "h3",
+                        "title_color": "#4C2A19",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Libre Baskerville",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-desc-2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Extend your living space outdoors with custom pavilions, outdoor kitchens, pergolas, and more.</p>",
+                        "text_color": "#6B4532",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-link-2",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Learn More →",
+                        "link": {
+                          "url": "/outdoor-spaces/"
+                        },
+                        "size": "xs",
+                        "button_text_color": "#B08D66",
+                        "background_color": "transparent",
+                        "button_text_color_hover": "#8B6F4E",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "border_border": "none",
+                        "button_padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "service-card-3",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "auto",
+                "width": {
+                  "unit": "%",
+                  "size": 48,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "30",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#B08D66",
+                "css_classes": "gc-service-card"
+              },
+              "elements": [
+                {
+                  "id": "service-img-3",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "",
+                      "id": ""
+                    },
+                    "image_size": "large",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "service-content-3",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "0",
+                      "left": "30",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "service-title-3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Pool Houses & ADUs",
+                        "header_size": "h3",
+                        "title_color": "#4C2A19",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Libre Baskerville",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-desc-3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Add versatile living spaces with custom pool houses, detached garages, guest houses, and accessory dwelling units.</p>",
+                        "text_color": "#6B4532",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-link-3",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Learn More →",
+                        "link": {
+                          "url": "/pool-houses-garages-adus/"
+                        },
+                        "size": "xs",
+                        "button_text_color": "#B08D66",
+                        "background_color": "transparent",
+                        "button_text_color_hover": "#8B6F4E",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "border_border": "none",
+                        "button_padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "service-card-4",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "auto",
+                "width": {
+                  "unit": "%",
+                  "size": 48,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "30",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#B08D66",
+                "css_classes": "gc-service-card"
+              },
+              "elements": [
+                {
+                  "id": "service-img-4",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "",
+                      "id": ""
+                    },
+                    "image_size": "large",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "service-content-4",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "30",
+                      "bottom": "0",
+                      "left": "30",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "service-title-4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Sunrooms & Additions",
+                        "header_size": "h3",
+                        "title_color": "#4C2A19",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Libre Baskerville",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-desc-4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Expand your home seamlessly with sunrooms, room additions, kitchen expansions, and primary suite additions.</p>",
+                        "text_color": "#6B4532",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6,
+                          "sizes": []
+                        }
+                      }
+                    },
+                    {
+                      "id": "service-link-4",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Learn More →",
+                        "link": {
+                          "url": "/sunrooms-and-additions/"
+                        },
+                        "size": "xs",
+                        "button_text_color": "#B08D66",
+                        "background_color": "transparent",
+                        "button_text_color_hover": "#8B6F4E",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Corbel",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "border_border": "none",
+                        "button_padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cta-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 900,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "60",
+          "bottom": "100",
+          "left": "60",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "30",
+          "bottom": "60",
+          "left": "30",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#4C2A19"
+      },
+      "elements": [
+        {
+          "id": "cta-heading",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Ready to Start Your Project?",
+            "header_size": "h2",
+            "align": "center",
+            "title_color": "#FDFBF8",
+            "typography_typography": "custom",
+            "typography_font_family": "Libre Baskerville",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 44,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 32,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "cta-text",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"text-align: center;\">Let's discuss your vision and create something extraordinary together. Our team is ready to guide you through every step of the building process.</p>",
+            "text_color": "#C9A878",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 19,
+              "sizes": []
+            },
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.7,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "cta-buttons",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_justify_content": "center",
+            "flex_wrap": "wrap",
+            "flex_gap": {
+              "unit": "px",
+              "size": 20,
+              "sizes": []
+            },
+            "margin": {
+              "unit": "px",
+              "top": "30",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "cta-estimate-btn",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Request an Estimate",
+                "link": {
+                  "url": "/request-an-estimate/",
+                  "custom_attributes": "data-gc-estimate-trigger:true"
+                },
+                "size": "lg",
+                "button_text_color": "#4C2A19",
+                "background_color": "#B08D66",
+                "button_text_color_hover": "#4C2A19",
+                "button_background_hover_color": "#C9A878",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "button_padding": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "40",
+                  "bottom": "18",
+                  "left": "40",
+                  "isLinked": false
+                },
+                "css_classes": "gc-btn gc-btn--primary gc-estimate-trigger"
+              }
+            },
+            {
+              "id": "cta-call-btn",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Call (615) 200-8898",
+                "link": {
+                  "url": "tel:6152008898"
+                },
+                "size": "lg",
+                "button_text_color": "#FDFBF8",
+                "background_color": "transparent",
+                "button_text_color_hover": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2",
+                  "isLinked": true
+                },
+                "border_color": "#FDFBF8",
+                "button_padding": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "40",
+                  "bottom": "18",
+                  "left": "40",
+                  "isLinked": false
+                },
+                "css_classes": "gc-btn gc-btn--outline-light"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes",
+    "template": "elementor_header_footer"
+  }
+}
