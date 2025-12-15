@@ -1,0 +1,688 @@
+{
+  "version": "0.4",
+  "title": "Contact",
+  "type": "page",
+  "content": [
+    {
+      "id": "contact-hero",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 900,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": {
+          "unit": "px",
+          "top": "140",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "100",
+          "right": "20",
+          "bottom": "50",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F0E8"
+      },
+      "elements": [
+        {
+          "id": "hero-eyebrow",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Get In Touch",
+            "header_size": "h6",
+            "align": "center",
+            "title_color": "#B08D66",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 13,
+              "sizes": []
+            },
+            "typography_font_weight": "600",
+            "typography_text_transform": "uppercase",
+            "typography_letter_spacing": {
+              "unit": "px",
+              "size": 2,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "hero-title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Contact Us",
+            "header_size": "h1",
+            "align": "center",
+            "title_color": "#4C2A19",
+            "typography_typography": "custom",
+            "typography_font_family": "Libre Baskerville",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 52,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 36,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "hero-description",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"text-align: center;\">We'd love to hear about your project. Reach out to start a conversation about your dream home or outdoor space.</p>",
+            "text_color": "#6B4532",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.7,
+              "sizes": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "contact-main",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 60,
+          "sizes": []
+        },
+        "flex_wrap": "wrap",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "40",
+          "bottom": "100",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "50",
+          "right": "20",
+          "bottom": "50",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FDFBF8"
+      },
+      "elements": [
+        {
+          "id": "contact-info-col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 40,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 40,
+              "sizes": []
+            }
+          },
+          "elements": [
+            {
+              "id": "contact-card",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "40",
+                  "right": "40",
+                  "bottom": "40",
+                  "left": "40",
+                  "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#4C2A19"
+              },
+              "elements": [
+                {
+                  "id": "card-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Contact Information",
+                    "header_size": "h3",
+                    "title_color": "#FDFBF8",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Libre Baskerville",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 26,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "contact-details",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "_id": "phone",
+                        "text": "(615) 200-8898",
+                        "link": {
+                          "url": "tel:6152008898"
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-phone",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "email",
+                        "text": "info@granderconstruction.com",
+                        "link": {
+                          "url": "mailto:info@granderconstruction.com"
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-envelope",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "address",
+                        "text": "1314 Brick Church Pike, Nashville, TN 37207",
+                        "link": {
+                          "url": "https://maps.google.com/?q=1314+Brick+Church+Pike+Nashville+TN",
+                          "is_external": true
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-map-marker-alt",
+                          "library": "fa-solid"
+                        }
+                      }
+                    ],
+                    "space_between": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "icon_color": "#B08D66",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "text_color": "#FDFBF8",
+                    "text_color_hover": "#B08D66",
+                    "text_typography_typography": "custom",
+                    "text_typography_font_family": "Corbel",
+                    "text_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    }
+                  }
+                },
+                {
+                  "id": "hours-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Business Hours",
+                    "header_size": "h4",
+                    "title_color": "#B08D66",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Corbel",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "0",
+                      "bottom": "10",
+                      "left": "0",
+                      "isLinked": false
+                    }
+                  }
+                },
+                {
+                  "id": "hours-text",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p>",
+                    "text_color": "#C9A878",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Corbel",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contact-form-col",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 55,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "form-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Send Us a Message",
+                "header_size": "h2",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "contact-form",
+              "elType": "widget",
+              "widgetType": "form",
+              "settings": {
+                "form_name": "Contact Form",
+                "form_fields": [
+                  {
+                    "_id": "name",
+                    "field_type": "text",
+                    "field_label": "Full Name",
+                    "placeholder": "Your name",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "email",
+                    "field_type": "email",
+                    "field_label": "Email",
+                    "placeholder": "Your email",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "phone",
+                    "field_type": "tel",
+                    "field_label": "Phone",
+                    "placeholder": "Your phone number",
+                    "required": "false",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "subject",
+                    "field_type": "select",
+                    "field_label": "Subject",
+                    "required": "true",
+                    "width": "50",
+                    "field_options": "General Inquiry\nProject Question\nRequest Information\nOther"
+                  },
+                  {
+                    "_id": "message",
+                    "field_type": "textarea",
+                    "field_label": "Message",
+                    "placeholder": "How can we help you?",
+                    "required": "true",
+                    "width": "100",
+                    "rows": 5
+                  }
+                ],
+                "button_text": "Send Message",
+                "button_size": "md",
+                "button_text_color": "#FDFBF8",
+                "button_background_color": "#B08D66",
+                "button_hover_color": "#FDFBF8",
+                "button_background_hover_color": "#8B6F4E",
+                "button_typography_typography": "custom",
+                "button_typography_font_family": "Corbel",
+                "button_typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "button_typography_font_weight": "600",
+                "button_typography_text_transform": "uppercase",
+                "button_typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "field_text_color": "#1A1A1A",
+                "field_background_color": "#FFFFFF",
+                "field_border_color": "#E8E4DE",
+                "field_border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "label_typography_typography": "custom",
+                "label_typography_font_family": "Corbel",
+                "label_typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "label_typography_font_weight": "600",
+                "label_color": "#4C2A19",
+                "email_to": "info@granderconstruction.com",
+                "email_subject": "Contact Form: [field id=\"subject\"]",
+                "success_message": "Thank you for your message! We'll get back to you soon."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "min_height": {
+          "unit": "px",
+          "size": 450,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "google-map",
+          "elType": "widget",
+          "widgetType": "google_maps",
+          "settings": {
+            "address": "1314 Brick Church Pike, Nashville, TN 37207",
+            "zoom": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "height": {
+              "unit": "px",
+              "size": 450,
+              "sizes": []
+            },
+            "css_filters_css_filter": "custom",
+            "css_filters_saturate": {
+              "unit": "px",
+              "size": 0.8,
+              "sizes": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "faq-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 900,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "40",
+          "bottom": "100",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F0E8"
+      },
+      "elements": [
+        {
+          "id": "faq-header",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "margin": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "50",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "faq-eyebrow",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "FAQ",
+                "header_size": "h6",
+                "align": "center",
+                "title_color": "#B08D66",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "faq-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Common Questions",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "faq-accordion",
+          "elType": "widget",
+          "widgetType": "accordion",
+          "settings": {
+            "tabs": [
+              {
+                "_id": "faq-1",
+                "tab_title": "What areas do you serve?",
+                "tab_content": "We primarily serve Middle Tennessee, including Nashville, Franklin, Brentwood, Murfreesboro, and surrounding areas. We're happy to discuss projects throughout the region."
+              },
+              {
+                "_id": "faq-2",
+                "tab_title": "How long does a typical project take?",
+                "tab_content": "Project timelines vary based on scope and complexity. A custom home typically takes 10-14 months from groundbreaking. Additions and outdoor structures generally range from 3-6 months. We provide detailed timelines during the planning phase."
+              },
+              {
+                "_id": "faq-3",
+                "tab_title": "Do you provide design services?",
+                "tab_content": "Yes! We work with talented architects and designers, or we can collaborate with your existing design team. Our design-build approach ensures seamless coordination from concept through completion."
+              },
+              {
+                "_id": "faq-4",
+                "tab_title": "What is your warranty policy?",
+                "tab_content": "We stand behind our work with comprehensive warranties. All Grander homes include a 1-year builder warranty covering workmanship and materials, plus extended warranties on major systems and structural components."
+              },
+              {
+                "_id": "faq-5",
+                "tab_title": "How do I get started?",
+                "tab_content": "Simply fill out our estimate request form or give us a call. We'll schedule a consultation to discuss your vision, review your site (if applicable), and provide guidance on next steps and budget expectations."
+              }
+            ],
+            "icon": {
+              "value": "fas fa-plus",
+              "library": "fa-solid"
+            },
+            "icon_active": {
+              "value": "fas fa-minus",
+              "library": "fa-solid"
+            },
+            "title_color": "#4C2A19",
+            "title_background": "#FFFFFF",
+            "title_typography_typography": "custom",
+            "title_typography_font_family": "Libre Baskerville",
+            "title_typography_font_size": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "icon_color": "#B08D66",
+            "icon_active_color": "#B08D66",
+            "content_color": "#4C2A19",
+            "content_background_color": "#FFFFFF",
+            "content_typography_typography": "custom",
+            "content_typography_font_family": "Corbel",
+            "content_typography_font_size": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "content_typography_line_height": {
+              "unit": "em",
+              "size": 1.7,
+              "sizes": []
+            },
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#E8E4DE"
+          }
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes",
+    "template": "elementor_header_footer"
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "version": "0.4",
+  "title": "Blog Archive",
+  "type": "archive",
+  "content": [
+    {
+      "id": "archive-hero",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "20",
+          "bottom": "40",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F0E8"
+      },
+      "elements": [
+        {
+          "id": "blog-eyebrow",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Our Blog",
+            "header_size": "h6",
+            "align": "center",
+            "title_color": "#B08D66",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 13,
+              "sizes": []
+            },
+            "typography_font_weight": "600",
+            "typography_text_transform": "uppercase",
+            "typography_letter_spacing": {
+              "unit": "px",
+              "size": 2,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "blog-title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Insights & Inspiration",
+            "header_size": "h1",
+            "align": "center",
+            "title_color": "#4C2A19",
+            "typography_typography": "custom",
+            "typography_font_family": "Libre Baskerville",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 48,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 32,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "blog-description",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"text-align: center;\">Expert advice on building, design trends, and behind-the-scenes looks at our custom home projects.</p>",
+            "text_color": "#6B4532",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.7,
+              "sizes": []
+            },
+            "_element_width": "auto",
+            "width": {
+              "unit": "px",
+              "size": 600,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "blog-search",
+          "elType": "widget",
+          "widgetType": "search-form",
+          "settings": {
+            "placeholder": "Search articles...",
+            "skin": "classic",
+            "button_type": "icon",
+            "size": "sm",
+            "input_typography_typography": "custom",
+            "input_typography_font_family": "Corbel",
+            "input_typography_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "input_background_color": "#FFFFFF",
+            "input_border_color": "#E8E4DE",
+            "button_text_color": "#FDFBF8",
+            "button_background_color": "#B08D66",
+            "_element_width": "auto",
+            "width": {
+              "unit": "px",
+              "size": 350,
+              "sizes": []
+            },
+            "margin": {
+              "unit": "px",
+              "top": "30",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "archive-posts-section",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "100",
+          "left": "40",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "40",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FDFBF8"
+      },
+      "elements": [
+        {
+          "id": "posts-grid",
+          "elType": "widget",
+          "widgetType": "archive-posts",
+          "settings": {
+            "posts_per_page": 9,
+            "_skin": "cards",
+            "cards_columns": 3,
+            "cards_columns_tablet": 2,
+            "cards_columns_mobile": 1,
+            "cards_row_gap": {
+              "unit": "px",
+              "size": 40,
+              "sizes": []
+            },
+            "cards_column_gap": {
+              "unit": "px",
+              "size": 30,
+              "sizes": []
+            },
+            "thumbnail": "yes",
+            "thumbnail_size": "large",
+            "masonry": "no",
+            "show_title": "yes",
+            "title_tag": "h3",
+            "meta_data": ["date", "comments"],
+            "meta_separator": "|",
+            "show_excerpt": "yes",
+            "excerpt_length": 20,
+            "show_read_more": "yes",
+            "read_more_text": "Read Article",
+            "show_badge": "yes",
+            "badge_taxonomy": "category",
+            "card_item_background_color": "#FFFFFF",
+            "card_border_border": "solid",
+            "card_border_width": {
+              "unit": "px",
+              "top": "2",
+              "right": "2",
+              "bottom": "2",
+              "left": "2",
+              "isLinked": true
+            },
+            "card_border_color": "#B08D66",
+            "card_border_radius": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "card_padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "25",
+              "left": "0",
+              "isLinked": false
+            },
+            "card_content_padding": {
+              "unit": "px",
+              "top": "25",
+              "right": "25",
+              "bottom": "0",
+              "left": "25",
+              "isLinked": false
+            },
+            "card_hover_effect": "raise",
+            "badge_color": "#FDFBF8",
+            "badge_background_color": "#B08D66",
+            "badge_typography_typography": "custom",
+            "badge_typography_font_family": "Corbel",
+            "badge_typography_font_size": {
+              "unit": "px",
+              "size": 11,
+              "sizes": []
+            },
+            "badge_typography_font_weight": "600",
+            "badge_typography_text_transform": "uppercase",
+            "badge_typography_letter_spacing": {
+              "unit": "px",
+              "size": 1,
+              "sizes": []
+            },
+            "title_color": "#4C2A19",
+            "title_typography_typography": "custom",
+            "title_typography_font_family": "Libre Baskerville",
+            "title_typography_font_size": {
+              "unit": "px",
+              "size": 22,
+              "sizes": []
+            },
+            "title_typography_font_size_mobile": {
+              "unit": "px",
+              "size": 20,
+              "sizes": []
+            },
+            "title_color_hover": "#B08D66",
+            "meta_color": "#8B6B5A",
+            "meta_typography_typography": "custom",
+            "meta_typography_font_family": "Corbel",
+            "meta_typography_font_size": {
+              "unit": "px",
+              "size": 13,
+              "sizes": []
+            },
+            "excerpt_color": "#6B4532",
+            "excerpt_typography_typography": "custom",
+            "excerpt_typography_font_family": "Corbel",
+            "excerpt_typography_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "excerpt_typography_line_height": {
+              "unit": "em",
+              "size": 1.6,
+              "sizes": []
+            },
+            "read_more_color": "#B08D66",
+            "read_more_color_hover": "#8B6F4E",
+            "read_more_typography_typography": "custom",
+            "read_more_typography_font_family": "Corbel",
+            "read_more_typography_font_size": {
+              "unit": "px",
+              "size": 14,
+              "sizes": []
+            },
+            "read_more_typography_font_weight": "600",
+            "pagination_type": "numbers_and_prev_next",
+            "pagination_previous_label": "← Newer",
+            "pagination_next_label": "Older →",
+            "pagination_align": "center",
+            "pagination_spacing": {
+              "unit": "px",
+              "size": 60,
+              "sizes": []
+            },
+            "pagination_color": "#4C2A19",
+            "pagination_typography_typography": "custom",
+            "pagination_typography_font_family": "Corbel",
+            "pagination_typography_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "pagination_color_hover": "#B08D66",
+            "pagination_active_color": "#B08D66",
+            "css_classes": "gc-blog-grid"
+          }
+        }
+      ]
+    },
+    {
+      "id": "archive-cta",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 900,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "60",
+          "bottom": "80",
+          "left": "60",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "50",
+          "right": "30",
+          "bottom": "50",
+          "left": "30",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#4C2A19",
+        "margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "40",
+          "bottom": "80",
+          "left": "40",
+          "isLinked": false
+        },
+        "margin_mobile": {
+          "unit": "px",
+          "top": "0",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "cta-heading",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Ready to Start Your Project?",
+            "header_size": "h2",
+            "align": "center",
+            "title_color": "#FDFBF8",
+            "typography_typography": "custom",
+            "typography_font_family": "Libre Baskerville",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 36,
+              "sizes": []
+            },
+            "typography_font_size_mobile": {
+              "unit": "px",
+              "size": 28,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "cta-text",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"text-align: center;\">Let's discuss your vision and create something extraordinary together.</p>",
+            "text_color": "#C9A878",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.7,
+              "sizes": []
+            }
+          }
+        },
+        {
+          "id": "cta-button",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "Request an Estimate",
+            "link": {
+              "url": "/request-an-estimate/",
+              "is_external": false,
+              "nofollow": false,
+              "custom_attributes": "data-gc-estimate-trigger:true"
+            },
+            "size": "md",
+            "button_text_color": "#4C2A19",
+            "background_color": "#B08D66",
+            "button_text_color_hover": "#4C2A19",
+            "button_background_hover_color": "#C9A878",
+            "typography_typography": "custom",
+            "typography_font_family": "Corbel",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "typography_font_weight": "600",
+            "typography_text_transform": "uppercase",
+            "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.5,
+              "sizes": []
+            },
+            "border_radius": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "button_padding": {
+              "unit": "px",
+              "top": "16",
+              "right": "36",
+              "bottom": "16",
+              "left": "36",
+              "isLinked": false
+            },
+            "css_classes": "gc-btn gc-btn--primary gc-estimate-trigger"
+          }
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "metadata": {
+    "condition_type": "include",
+    "conditions": ["include/archive/post"]
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "version": "0.4",
+  "title": "Request Estimate Popup",
+  "type": "popup",
+  "content": [
+    {
+      "id": "popup-container",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "min_height": {
+          "unit": "vh",
+          "size": 100,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_align_items": "stretch",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_color": "#FDFBF8",
+        "css_classes": "gc-estimate-popup"
+      },
+      "elements": [
+        {
+          "id": "popup-left-panel",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 40,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "vh",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "padding": {
+              "unit": "px",
+              "top": "60",
+              "right": "50",
+              "bottom": "60",
+              "left": "50",
+              "isLinked": false
+            },
+            "background_background": "classic",
+            "background_color": "#4C2A19",
+            "hide_mobile": "hidden-mobile"
+          },
+          "elements": [
+            {
+              "id": "popup-logo",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "",
+                  "id": ""
+                },
+                "image_size": "medium",
+                "width": {
+                  "unit": "px",
+                  "size": 160,
+                  "sizes": []
+                },
+                "align": "left"
+              }
+            },
+            {
+              "id": "popup-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Let's Build Something Extraordinary",
+                "header_size": "h2",
+                "title_color": "#FDFBF8",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "popup-description",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Share your vision with us. Our team will review your project details and schedule a consultation to discuss how we can bring your dream to life.</p>",
+                "text_color": "#C9A878",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.7,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "popup-trust-badges",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "40",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "trust-item-1",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "_id": "item-1",
+                        "text": "20+ Years of Excellence",
+                        "selected_icon": {
+                          "value": "fas fa-check",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "item-2",
+                        "text": "Licensed & Insured",
+                        "selected_icon": {
+                          "value": "fas fa-check",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "item-3",
+                        "text": "Free Consultation",
+                        "selected_icon": {
+                          "value": "fas fa-check",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "item-4",
+                        "text": "Locally Owned & Operated",
+                        "selected_icon": {
+                          "value": "fas fa-check",
+                          "library": "fa-solid"
+                        }
+                      }
+                    ],
+                    "space_between": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "icon_color": "#B08D66",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "text_color": "#FDFBF8",
+                    "text_typography_typography": "custom",
+                    "text_typography_font_family": "Corbel",
+                    "text_typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "popup-contact",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"margin-top: 40px;\"><strong>Prefer to call?</strong><br><a href=\"tel:6152008898\" style=\"color: #B08D66; font-size: 20px;\">(615) 200-8898</a></p>",
+                "text_color": "#FDFBF8",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "popup-right-panel",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "auto",
+            "width": {
+              "unit": "%",
+              "size": 60,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "vh",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "padding": {
+              "unit": "px",
+              "top": "60",
+              "right": "80",
+              "bottom": "60",
+              "left": "80",
+              "isLinked": false
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "50",
+              "right": "40",
+              "bottom": "50",
+              "left": "40",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "40",
+              "right": "20",
+              "bottom": "40",
+              "left": "20",
+              "isLinked": false
+            },
+            "background_background": "classic",
+            "background_color": "#FDFBF8"
+          },
+          "elements": [
+            {
+              "id": "popup-close",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "",
+                "icon": {
+                  "value": "fas fa-times",
+                  "library": "fa-solid"
+                },
+                "selected_icon": {
+                  "value": "fas fa-times",
+                  "library": "fa-solid"
+                },
+                "button_type": "default",
+                "size": "xs",
+                "button_text_color": "#4C2A19",
+                "background_color": "transparent",
+                "button_text_color_hover": "#B08D66",
+                "button_background_hover_color": "transparent",
+                "_position": "absolute",
+                "_offset_x": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "_offset_y": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "_offset_orientation_h": "end",
+                "_offset_orientation_v": "start",
+                "css_classes": "gc-popup-close"
+              }
+            },
+            {
+              "id": "form-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Request an Estimate",
+                "header_size": "h2",
+                "title_color": "#4C2A19",
+                "typography_typography": "custom",
+                "typography_font_family": "Libre Baskerville",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 28,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "form-subheading",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Fill out the form below and we'll get back to you within 24 hours.</p>",
+                "text_color": "#6B4532",
+                "typography_typography": "custom",
+                "typography_font_family": "Corbel",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                }
+              }
+            },
+            {
+              "id": "estimate-form",
+              "elType": "widget",
+              "widgetType": "form",
+              "settings": {
+                "form_name": "Request Estimate",
+                "form_fields": [
+                  {
+                    "_id": "name",
+                    "field_type": "text",
+                    "field_label": "Full Name",
+                    "placeholder": "John Smith",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "email",
+                    "field_type": "email",
+                    "field_label": "Email Address",
+                    "placeholder": "john@example.com",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "phone",
+                    "field_type": "tel",
+                    "field_label": "Phone Number",
+                    "placeholder": "(615) 555-0123",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "address",
+                    "field_type": "text",
+                    "field_label": "Project Address",
+                    "placeholder": "Start typing address...",
+                    "required": "false",
+                    "width": "50",
+                    "css_classes": "gc-address-autocomplete"
+                  },
+                  {
+                    "_id": "project_type",
+                    "field_type": "select",
+                    "field_label": "Project Type",
+                    "required": "true",
+                    "width": "50",
+                    "field_options": "Custom Home\nAddition / Expansion\nOutdoor Structure\nPool House / ADU\nRenovation\nOther"
+                  },
+                  {
+                    "_id": "timeline",
+                    "field_type": "select",
+                    "field_label": "Desired Timeline",
+                    "required": "false",
+                    "width": "50",
+                    "field_options": "Within 3 months\n3-6 months\n6-12 months\nFlexible"
+                  },
+                  {
+                    "_id": "budget",
+                    "field_type": "select",
+                    "field_label": "Estimated Budget",
+                    "required": "false",
+                    "width": "100",
+                    "field_options": "Under $250,000\n$250,000 - $500,000\n$500,000 - $1,000,000\n$1,000,000+\nNot Sure Yet"
+                  },
+                  {
+                    "_id": "message",
+                    "field_type": "textarea",
+                    "field_label": "Tell Us About Your Project",
+                    "placeholder": "Describe your project vision, specific needs, or any questions you have...",
+                    "required": "false",
+                    "width": "100",
+                    "rows": 4
+                  },
+                  {
+                    "_id": "how_heard",
+                    "field_type": "select",
+                    "field_label": "How Did You Hear About Us?",
+                    "required": "false",
+                    "width": "100",
+                    "field_options": "Google Search\nReferral\nSocial Media\nHouzz\nDriving By\nOther"
+                  }
+                ],
+                "button_text": "Submit Request",
+                "button_size": "md",
+                "button_width": "100",
+                "button_align": "stretch",
+                "button_text_color": "#FDFBF8",
+                "button_background_color": "#B08D66",
+                "button_hover_color": "#FDFBF8",
+                "button_background_hover_color": "#8B6F4E",
+                "button_typography_typography": "custom",
+                "button_typography_font_family": "Corbel",
+                "button_typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "button_typography_font_weight": "600",
+                "button_typography_text_transform": "uppercase",
+                "button_typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "button_border_radius": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "field_text_color": "#1A1A1A",
+                "field_background_color": "#FFFFFF",
+                "field_border_color": "#E8E4DE",
+                "field_border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "field_border_radius": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "label_typography_typography": "custom",
+                "label_typography_font_family": "Corbel",
+                "label_typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "label_typography_font_weight": "600",
+                "label_color": "#4C2A19",
+                "email_to": "info@granderconstruction.com",
+                "email_subject": "New Estimate Request from [field id=\"name\"]",
+                "success_message": "Thank you! We've received your request and will be in touch within 24 hours.",
+                "required_mark": "*",
+                "css_classes": "gc-estimate-form"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "popup_settings": {
+    "width": {
+      "unit": "%",
+      "size": 90,
+      "sizes": []
+    },
+    "width_tablet": {
+      "unit": "%",
+      "size": 95,
+      "sizes": []
+    },
+    "width_mobile": {
+      "unit": "%",
+      "size": 100,
+      "sizes": []
+    },
+    "height": "fit_to_content",
+    "max_height": {
+      "unit": "vh",
+      "size": 95,
+      "sizes": []
+    },
+    "position": "center center",
+    "animation": "fade",
+    "animation_duration": 300,
+    "overlay": "yes",
+    "overlay_color": "rgba(0,0,0,0.7)",
+    "close_button": "yes",
+    "close_button_position": "inside",
+    "entrance_animation": "fadeInUp",
+    "exit_animation": "fadeOutDown",
+    "prevent_close_on_overlay_click": "no",
+    "prevent_close_on_esc_key": "no"
+  },
+  "triggers": [
+    {
+      "type": "on_click",
+      "settings": {
+        "selector": ".gc-estimate-trigger, [data-gc-estimate-trigger=\"true\"]"
+      }
+    }
+  ],
+  "metadata": {
+    "condition_type": "include",
+    "conditions": []
+  }
+}

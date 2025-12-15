@@ -1,0 +1,162 @@
+{
+  "name": "Grander Construction",
+  "title": "Grander Construction Full Website Kit",
+  "description": "Premium custom home builder website kit with luxury design aesthetic",
+  "author": "Grander Construction",
+  "version": "1.0.0",
+  "elementor_version": "3.18.0",
+  "created": "2025-01-15",
+  "thumbnail": "thumbnail.jpg",
+  "keywords": [
+    "construction",
+    "builder",
+    "custom homes",
+    "luxury",
+    "contractor"
+  ],
+  "site-settings": "site-settings.json",
+  "content": [
+    {
+      "id": 1,
+      "title": "Home",
+      "doc_type": "page",
+      "file": "content/page-home.json",
+      "thumbnail": "content/thumbs/home.jpg"
+    },
+    {
+      "id": 2,
+      "title": "About Our Company",
+      "doc_type": "page",
+      "file": "content/page-about-our-company.json",
+      "thumbnail": "content/thumbs/about.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Our Team",
+      "doc_type": "page",
+      "file": "content/page-our-team.json",
+      "thumbnail": "content/thumbs/team.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Build Process",
+      "doc_type": "page",
+      "file": "content/page-build-process.json",
+      "thumbnail": "content/thumbs/process.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Performance Building",
+      "doc_type": "page",
+      "file": "content/page-performance-building.json",
+      "thumbnail": "content/thumbs/performance.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Custom Homes",
+      "doc_type": "page",
+      "file": "content/page-custom-homes.json",
+      "thumbnail": "content/thumbs/custom-homes.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Outdoor Spaces",
+      "doc_type": "page",
+      "file": "content/page-outdoor-spaces.json",
+      "thumbnail": "content/thumbs/outdoor.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Pool Houses, Garages & ADUs",
+      "doc_type": "page",
+      "file": "content/page-pool-houses-garages-adus.json",
+      "thumbnail": "content/thumbs/pool-houses.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Sunrooms & Additions",
+      "doc_type": "page",
+      "file": "content/page-sunrooms-additions.json",
+      "thumbnail": "content/thumbs/sunrooms.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Gallery",
+      "doc_type": "page",
+      "file": "content/page-gallery.json",
+      "thumbnail": "content/thumbs/gallery.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Blog",
+      "doc_type": "page",
+      "file": "content/page-blog.json",
+      "thumbnail": "content/thumbs/blog.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Contact",
+      "doc_type": "page",
+      "file": "content/page-contact.json",
+      "thumbnail": "content/thumbs/contact.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Request an Estimate",
+      "doc_type": "page",
+      "file": "content/page-request-estimate.json",
+      "thumbnail": "content/thumbs/estimate.jpg"
+    }
+  ],
+  "templates": [
+    {
+      "id": 101,
+      "title": "Header",
+      "doc_type": "header",
+      "file": "templates/header.json",
+      "conditions": ["include/general"]
+    },
+    {
+      "id": 102,
+      "title": "Footer",
+      "doc_type": "footer",
+      "file": "templates/footer.json",
+      "conditions": ["include/general"]
+    },
+    {
+      "id": 103,
+      "title": "Single Post",
+      "doc_type": "single-post",
+      "file": "templates/single-post.json",
+      "conditions": ["include/singular/post"]
+    },
+    {
+      "id": 104,
+      "title": "Blog Archive",
+      "doc_type": "archive",
+      "file": "templates/archive.json",
+      "conditions": ["include/archive/post"]
+    },
+    {
+      "id": 105,
+      "title": "Search Results",
+      "doc_type": "search-results",
+      "file": "templates/search-results.json",
+      "conditions": ["include/archive/search"]
+    },
+    {
+      "id": 106,
+      "title": "404 Page",
+      "doc_type": "error-404",
+      "file": "templates/404.json",
+      "conditions": ["include/singular/not_found404"]
+    },
+    {
+      "id": 107,
+      "title": "Request Estimate Popup",
+      "doc_type": "popup",
+      "file": "templates/popup-estimate.json",
+      "conditions": []
+    }
+  ]
+}
